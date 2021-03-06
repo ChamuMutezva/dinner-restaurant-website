@@ -1,15 +1,86 @@
 @import url('https://fonts.googleapis.com/css2?family=Spartan:wght@300;400;500;600;700;800;900&display=swap');
+@import 'reset';
+@import 'variables';
+
 body {
     font-family: 'Spartan', sans-serif;
     font-size: 16px;
 }
+
 .hero {
     position: relative;
+    background-image: url('../assets/images/homepage/hero-bg-mobile@2x.jpg');
+    background-repeat: no-repeat;
+    background-size: cover;
+    height: 100vh;
+    width: 100vw;
+    background-position: top;
+    //padding-bottom: 148px;
 }
 
 .hero__main {
-    position: absolute;
+    position: relative;
     top: 220px;
-    color: white;
-    background-color: #111111;
+    color: $white-tx;
+    background-color: $dark-bg;
+    padding: 12px 24px;
+
+    @media screen and(min-width: 450px) {
+        top: 300px;
+    }
+
+    @media screen and(min-width: 680px) {
+        top: 374px;
+    }
+}
+
+
+// Function for converting a px based font-size to rem.
+@function calculateRem($size) {
+    $remSize: $size / 16;
+    //Default font size on html element is 100%, equivalent to 16px;
+    @return #{$remSize}rem;
+}
+
+button {
+    font-size: calculateRem(14);
+    width: calculateRem(245);
+    line-height: 16px;
+    font-weight: 400;
+    letter-spacing: 2px;
+    padding: 21px;
+    background-color: inherit;
+    color: $white-tx;
+    border: 1px solid $white-tx;
+}
+
+h1 {
+    font-size: 2rem;
+    font-weight: 300;
+    line-height: 40px;
+    letter-spacing: -0.4px;
+}
+
+.hero__main__title {
+    font-size: 2rem;
+    font-weight: 300;
+    line-height: 40px;
+    letter-spacing: -0.4px;
+    margin-top: 16px;
+}
+
+.hero__main__descr {
+    font-size: calculateRem(15);
+    line-height: 25px;
+    font-weight: 300;
+    letter-spacing: -0.19px;
+    max-width: 30rem;
+    margin: 24px auto 36px;
+}
+
+@media screen and (min-width: 589px) {
+    .hero {
+        background-image: url('../assets/images/homepage/hero-bg-tablet@2x.jpg');
+    }
+
 }
