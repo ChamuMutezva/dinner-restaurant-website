@@ -1,6 +1,7 @@
 @import url('https://fonts.googleapis.com/css2?family=Spartan:wght@300;400;500;600;700;800;900&display=swap');
 @import 'reset';
 @import 'variables';
+@import 'mixins';
 
 body {
     font-family: 'Spartan', sans-serif;
@@ -15,7 +16,14 @@ body {
     height: 100vh;
     width: 100vw;
     background-position: top;
-    //padding-bottom: 148px;
+
+    @include mQ(589px) {
+        background-image: url('../assets/images/homepage/hero-bg-tablet@2x.jpg');
+    }
+
+    @include mQ(1080PX) {
+        background-image: url('../assets/images/homepage/hero-bg-desktop@2x.jpg');
+    }
 }
 
 .hero__main {
@@ -25,15 +33,32 @@ body {
     background-color: $dark-bg;
     padding: 12px 24px;
 
-    @media screen and(min-width: 450px) {
+    @include mQ(450px) {
         top: 300px;
     }
 
-    @media screen and(min-width: 680px) {
+    @include mQ(680px) {
         top: 374px;
+    }
+
+    @include mQ(1080px) {
+        top: 0px;
+        width: 50%;
+        padding-top: 65px;
+        padding-left: 105px;
     }
 }
 
+.hero__main__logo {
+    @include mQ(1080px) {
+        margin: 0;
+        display: block;
+    }
+}
+
+.hero__main__btncontainer {
+    // margin-bottom: 148px;
+}
 
 // Function for converting a px based font-size to rem.
 @function calculateRem($size) {
@@ -52,13 +77,10 @@ button {
     background-color: inherit;
     color: $white-tx;
     border: 1px solid $white-tx;
-}
-
-h1 {
-    font-size: 2rem;
-    font-weight: 300;
-    line-height: 40px;
-    letter-spacing: -0.4px;
+    @include mQ(1080px) {
+        display: block;
+        margin: 0;
+    }
 }
 
 .hero__main__title {
@@ -67,6 +89,19 @@ h1 {
     line-height: 40px;
     letter-spacing: -0.4px;
     margin-top: 16px;
+
+    @include mQ(680px) {
+        font-size: calculateRem(48);
+        line-height: 64px;
+        letter-spacing: -0.6px;
+        width: 60%;
+        margin: 24px auto;
+    }
+
+    @include mQ(1080px) {
+        text-align: left;
+        margin: 24px 0;
+    }
 }
 
 .hero__main__descr {
@@ -76,11 +111,15 @@ h1 {
     letter-spacing: -0.19px;
     max-width: 30rem;
     margin: 24px auto 36px;
-}
 
-@media screen and (min-width: 589px) {
-    .hero {
-        background-image: url('../assets/images/homepage/hero-bg-tablet@2x.jpg');
+    @include mQ(680px) {
+        font-size: calculateRem(18);
+        line-height: 30px;
+        letter-spacing: -0.22px;
     }
 
+    @include mQ(1080px) {
+        text-align: left;
+        margin: 24px 0 36px;
+    }
 }

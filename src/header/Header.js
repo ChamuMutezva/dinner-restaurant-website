@@ -30,9 +30,9 @@ const Header = () => {
                         Eat the freshest produce from
                         the comfort of our farmhouse.
                     </p>
-                    div
-                    
-                    <Button title="Book a table" />
+                    <div className="hero__main__btncontainer">
+                        <Button title="Book a table" />
+                    </div>
 
                 </div>
             </div>

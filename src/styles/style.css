@@ -68,6 +68,18 @@ body {
   background-position: top;
 }
 
+@media screen and (min-width: 589px) {
+  .hero {
+    background-image: url("../assets/images/homepage/hero-bg-tablet@2x.jpg");
+  }
+}
+
+@media screen and (min-width: 1080PX) {
+  .hero {
+    background-image: url("../assets/images/homepage/hero-bg-desktop@2x.jpg");
+  }
+}
+
 .hero__main {
   position: relative;
   top: 220px;
@@ -88,6 +100,22 @@ body {
   }
 }
 
+@media screen and (min-width: 1080px) {
+  .hero__main {
+    top: 0px;
+    width: 50%;
+    padding-top: 65px;
+    padding-left: 105px;
+  }
+}
+
+@media screen and (min-width: 1080px) {
+  .hero__main__logo {
+    margin: 0;
+    display: block;
+  }
+}
+
 button {
   font-size: 0.875rem;
   width: 15.3125rem;
@@ -100,11 +128,11 @@ button {
   border: 1px solid #ffffff;
 }
 
-h1 {
-  font-size: 2rem;
-  font-weight: 300;
-  line-height: 40px;
-  letter-spacing: -0.4px;
+@media screen and (min-width: 1080px) {
+  button {
+    display: block;
+    margin: 0;
+  }
 }
 
 .hero__main__title {
@@ -113,6 +141,23 @@ h1 {
   line-height: 40px;
   letter-spacing: -0.4px;
   margin-top: 16px;
+}
+
+@media screen and (min-width: 680px) {
+  .hero__main__title {
+    font-size: 3rem;
+    line-height: 64px;
+    letter-spacing: -0.6px;
+    width: 60%;
+    margin: 24px auto;
+  }
+}
+
+@media screen and (min-width: 1080px) {
+  .hero__main__title {
+    text-align: left;
+    margin: 24px 0;
+  }
 }
 
 .hero__main__descr {
@@ -124,9 +169,18 @@ h1 {
   margin: 24px auto 36px;
 }
 
-@media screen and (min-width: 589px) {
-  .hero {
-    background-image: url("../assets/images/homepage/hero-bg-tablet@2x.jpg");
+@media screen and (min-width: 680px) {
+  .hero__main__descr {
+    font-size: 1.125rem;
+    line-height: 30px;
+    letter-spacing: -0.22px;
+  }
+}
+
+@media screen and (min-width: 1080px) {
+  .hero__main__descr {
+    text-align: left;
+    margin: 24px 0 36px;
   }
 }
 /*# sourceMappingURL=style.css.map */
