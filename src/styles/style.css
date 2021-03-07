@@ -53,17 +53,11 @@ table {
   border-spacing: 0;
 }
 
-body {
-  font-family: 'Spartan', sans-serif;
-  font-size: 16px;
-}
-
 .hero {
   position: relative;
   background-image: url("../assets/images/homepage/hero-bg-mobile@2x.jpg");
   background-repeat: no-repeat;
-  background-size: cover;
-  height: 100vh;
+  background-size: 100% auto;
   width: 100vw;
   background-position: top;
 }
@@ -114,6 +108,10 @@ body {
     margin: 0;
     display: block;
   }
+}
+
+.hero__main__btncontainer {
+  padding-bottom: 145px;
 }
 
 button {
@@ -182,5 +180,10 @@ button {
     text-align: left;
     margin: 24px 0 36px;
   }
+}
+
+body {
+  font-family: 'Spartan', sans-serif;
+  font-size: 16px;
 }
 /*# sourceMappingURL=style.css.map */

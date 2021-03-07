@@ -1,7 +1,8 @@
+import Cards from './cards'
 const Main = () => {
     return(
-        <main>
-            <h2>Main section</h2>
+        <main>           
+            <Cards />
         </main>
     )
 }
