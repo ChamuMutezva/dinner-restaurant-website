@@ -4,7 +4,7 @@
     background-repeat: no-repeat;
     background-size: 100% auto;
     //height: 100vh;
-    width: 100vw;
+   // width: 100vw;
     background-position: top;
 
     @include mQ(589px) {
@@ -49,12 +49,12 @@
 .hero__main__btncontainer {
 	padding-bottom: 145px;
 }
-// Function for converting a px based font-size to rem.
-@function calculateRem($size) {
-    $remSize: $size / 16;
+ //Function for converting a px based font-size to rem.
+//@function calculateRem($size) {
+//    $remSize: $size / 16;
     //Default font size on html element is 100%, equivalent to 16px;
-    @return #{$remSize}rem;
-}
+//    @return #{$remSize}rem;
+//}
 
 button {
     font-size: calculateRem(14);
