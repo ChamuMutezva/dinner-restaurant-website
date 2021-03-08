@@ -7,7 +7,7 @@
    // width: 100vw;
     background-position: top;
 
-    @include mQ(589px) {
+    @include mQ(780px) {
         background-image: url('../assets/images/homepage/hero-bg-tablet@2x.jpg');
     }
 
@@ -28,7 +28,7 @@
     }
 
     @include mQ(680px) {
-        top: 374px;
+        top: 380px;
     }
 
     @include mQ(1080px) {

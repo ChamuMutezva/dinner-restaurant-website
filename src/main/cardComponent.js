@@ -9,11 +9,8 @@ const CardComponent = (props) => {
                     alt={props.alt} />
             </picture>
             <div className="card__main">
-                <h2 className="card__main__title">Enjoyable place for all the family</h2>
-                <p className="card__main__descr">
-                    Our relaxed surroundings make dining with us a great experience for everyone. We can even arrange
-                    a tour of the farm before your meal.
-                    </p>
+                <h2 className="card__main__title">{props.title}</h2>
+                <p className="card__main__descr">{props.description} </p>
             </div>
         </div>
     )

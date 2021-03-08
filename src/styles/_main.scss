@@ -1,6 +1,10 @@
 .cards__section {
     position: relative;
     top: 148px;
+    @include mQ(680px) {
+        top: 321px;
+    }
+
 }
 
 .card__main {
@@ -23,11 +27,20 @@
     letter-spacing: -0.4px;
     line-height: 40px;
     margin-bottom: 20px;
+    @include mQ(680px) {
+        max-width: 24rem;
+        margin: 20px auto;
+    }
+
 }
 .card__main__descr {
 	line-height: 25px;
 	letter-spacing: -0.19px;
     font-size: calculateRem(15);
+    @include mQ(680px) {
+        max-width: 24rem;
+        margin: auto;
+    }
 }
 .card__img {
     box-shadow: 0px 38px 20px 17px #ededed;

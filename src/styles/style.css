@@ -61,7 +61,7 @@ table {
   background-position: top;
 }
 
-@media screen and (min-width: 589px) {
+@media screen and (min-width: 780px) {
   .hero {
     background-image: url("../assets/images/homepage/hero-bg-tablet@2x.jpg");
   }
@@ -89,7 +89,7 @@ table {
 
 @media screen and (min-width: 680px) {
   .hero__main {
-    top: 374px;
+    top: 380px;
   }
 }
 
@@ -186,6 +186,12 @@ button {
   top: 148px;
 }
 
+@media screen and (min-width: 680px) {
+  .cards__section {
+    top: 321px;
+  }
+}
+
 .card__main {
   position: relative;
   margin-top: 24px;
@@ -208,10 +214,24 @@ button {
   margin-bottom: 20px;
 }
 
+@media screen and (min-width: 680px) {
+  .card__main__title {
+    max-width: 24rem;
+    margin: 20px auto;
+  }
+}
+
 .card__main__descr {
   line-height: 25px;
   letter-spacing: -0.19px;
   font-size: 0.9375rem;
+}
+
+@media screen and (min-width: 680px) {
+  .card__main__descr {
+    max-width: 24rem;
+    margin: auto;
+  }
 }
 
 .card__img {
