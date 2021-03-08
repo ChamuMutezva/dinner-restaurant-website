@@ -81,12 +81,6 @@ table {
   padding: 12px 24px;
 }
 
-@media screen and (min-width: 450px) {
-  .hero__main {
-    top: 300px;
-  }
-}
-
 @media screen and (min-width: 680px) {
   .hero__main {
     top: 380px;
@@ -181,6 +175,20 @@ button {
   }
 }
 
+@media screen and (min-width: 1080PX) {
+  .card {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-pack: center;
+        -ms-flex-pack: center;
+            justify-content: center;
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
+  }
+}
+
 .cards__section {
   position: relative;
   top: 148px;
@@ -189,6 +197,29 @@ button {
 @media screen and (min-width: 680px) {
   .cards__section {
     top: 321px;
+  }
+  .cards__section::before, .cards__section::after {
+    position: absolute;
+    width: 49%;
+    height: 320px;
+    background-color: #ededed;
+    content: "";
+    z-index: -1;
+  }
+  .cards__section::before {
+    left: 0;
+    top: 198px;
+    border-top-right-radius: 100px;
+  }
+  .cards__section::after {
+    bottom: -112px;
+    border-top-left-radius: 70px;
+  }
+}
+
+@media screen and (min-width: 1080px) {
+  .cards__section {
+    top: -58px;
   }
 }
 
@@ -205,6 +236,15 @@ button {
   top: 12px;
 }
 
+@media screen and (min-width: 680px) {
+  .card__main {
+    margin-bottom: 120px;
+  }
+  .card__main::before {
+    top: 24px;
+  }
+}
+
 .card__main__title {
   padding-top: 43px;
   font-size: 2rem;
@@ -217,7 +257,7 @@ button {
 @media screen and (min-width: 680px) {
   .card__main__title {
     max-width: 24rem;
-    margin: 20px auto;
+    margin: 8px auto 66px;
   }
 }
 
@@ -237,6 +277,22 @@ button {
 .card__img {
   -webkit-box-shadow: 0px 38px 20px 17px #ededed;
           box-shadow: 0px 38px 20px 17px #ededed;
+}
+
+.card__img img {
+  max-width: 90%;
+}
+
+@media screen and (min-width: 680px) {
+  .imageStyle {
+    position: relative;
+  }
+  .imageStyle::before {
+    top: 228px;
+    position: absolute;
+    right: 40px;
+    content: url("../assets/images/patterns/pattern-lines.svg");
+  }
 }
 
 body {
