@@ -1,9 +1,13 @@
 .card {
-    @include mQ(1080PX) {
+    @include mQ(1080px) {
         display: flex;
         justify-content: space-between;
-        align-items: end;
+        align-items: center;  
+        padding: 0px 110px;      
+    }
+    @include mQ(1440px){
         padding: 0 165px;
+        align-items: flex-end; 
     }
 }
 
