@@ -107,6 +107,12 @@ table {
   padding-bottom: 145px;
 }
 
+@media screen and (min-width: 1080px) {
+  .hero__main__btncontainer {
+    padding-bottom: 190px;
+  }
+}
+
 button {
   font-size: 0.875rem;
   width: 15.3125rem;
@@ -147,7 +153,7 @@ button {
 @media screen and (min-width: 1080px) {
   .hero__main__title {
     text-align: left;
-    margin: 24px 0;
+    margin: 146px 0 45px;
   }
 }
 
@@ -171,7 +177,7 @@ button {
 @media screen and (min-width: 1080px) {
   .hero__main__descr {
     text-align: left;
-    margin: 24px 0 36px;
+    margin: 24px 0 45px;
   }
 }
 

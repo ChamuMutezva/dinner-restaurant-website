@@ -48,6 +48,9 @@
 
 .hero__main__btncontainer {
 	padding-bottom: 145px;
+    @include mQ(1080px) {
+        padding-bottom: 190px;
+    }
 }
  //Function for converting a px based font-size to rem.
 //@function calculateRem($size) {
@@ -89,7 +92,7 @@ button {
 
     @include mQ(1080px) {
         text-align: left;
-        margin: 24px 0;
+        margin: 146px 0 45px;
     }
 }
 
@@ -109,6 +112,6 @@ button {
 
     @include mQ(1080px) {
         text-align: left;
-        margin: 24px 0 36px;
+        margin: 24px 0 45px;
     }
 }
