@@ -33,9 +33,9 @@
 
     @include mQ(1080px) {
         top: 0px;
-        width: 50%;
+        width: 45%;
         padding-top: 65px;
-        padding-left: 105px;
+        padding-left: 165px;
     }
 }
 
@@ -49,7 +49,7 @@
 .hero__main__btncontainer {
 	padding-bottom: 145px;
     @include mQ(1080px) {
-        padding-bottom: 190px;
+        padding-bottom: 189px;
     }
 }
  //Function for converting a px based font-size to rem.

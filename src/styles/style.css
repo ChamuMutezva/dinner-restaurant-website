@@ -90,9 +90,9 @@ table {
 @media screen and (min-width: 1080px) {
   .hero__main {
     top: 0px;
-    width: 50%;
+    width: 45%;
     padding-top: 65px;
-    padding-left: 105px;
+    padding-left: 165px;
   }
 }
 
@@ -109,7 +109,7 @@ table {
 
 @media screen and (min-width: 1080px) {
   .hero__main__btncontainer {
-    padding-bottom: 190px;
+    padding-bottom: 189px;
   }
 }
 
@@ -186,12 +186,13 @@ button {
     display: -webkit-box;
     display: -ms-flexbox;
     display: flex;
-    -webkit-box-pack: center;
-        -ms-flex-pack: center;
-            justify-content: center;
-    -webkit-box-align: center;
-        -ms-flex-align: center;
-            align-items: center;
+    -webkit-box-pack: justify;
+        -ms-flex-pack: justify;
+            justify-content: space-between;
+    -webkit-box-align: end;
+        -ms-flex-align: end;
+            align-items: end;
+    padding: 0 165px;
   }
 }
 
@@ -227,6 +228,10 @@ button {
   .cards__section {
     top: -58px;
   }
+  .cards__section::before {
+    top: 310px;
+    width: 62%;
+  }
 }
 
 .card__main {
@@ -251,6 +256,13 @@ button {
   }
 }
 
+@media screen and (min-width: 1080px) {
+  .card__main::before {
+    left: 24px;
+    position: absolute;
+  }
+}
+
 .card__main__title {
   padding-top: 43px;
   font-size: 2rem;
@@ -267,6 +279,13 @@ button {
   }
 }
 
+@media screen and (min-width: 1080px) {
+  .card__main__title {
+    text-align: left;
+    margin-left: 0;
+  }
+}
+
 .card__main__descr {
   line-height: 25px;
   letter-spacing: -0.19px;
@@ -280,6 +299,13 @@ button {
   }
 }
 
+@media screen and (min-width: 1080px) {
+  .card__main__descr {
+    text-align: left;
+    margin-left: 0;
+  }
+}
+
 .card__img {
   -webkit-box-shadow: 0px 38px 20px 17px #ededed;
           box-shadow: 0px 38px 20px 17px #ededed;
@@ -287,6 +313,13 @@ button {
 
 .card__img img {
   max-width: 90%;
+}
+
+@media screen and (min-width: 1080px) {
+  .card__img {
+    -webkit-box-shadow: none;
+            box-shadow: none;
+  }
 }
 
 @media screen and (min-width: 680px) {
@@ -298,6 +331,15 @@ button {
     position: absolute;
     right: 40px;
     content: url("../assets/images/patterns/pattern-lines.svg");
+  }
+}
+
+@media screen and (min-width: 1080px) {
+  .imageStyle {
+    -webkit-box-orient: horizontal;
+    -webkit-box-direction: reverse;
+        -ms-flex-direction: row-reverse;
+            flex-direction: row-reverse;
   }
 }
 

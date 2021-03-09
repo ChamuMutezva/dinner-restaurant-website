@@ -1,8 +1,9 @@
 .card {
     @include mQ(1080PX) {
         display: flex;
-        justify-content: center;
-        align-items: center;
+        justify-content: space-between;
+        align-items: end;
+        padding: 0 165px;
     }
 }
 
@@ -38,6 +39,10 @@
 
     @include mQ(1080px) {
         top: -58px;
+        &::before {
+            top: 310px;
+            width: 62%;
+        }
     }
 
 }
@@ -65,6 +70,13 @@
             // bottom: -230px;
         }
     }
+
+    @include mQ(1080px) {
+        &::before {
+            left: 24px;
+            position: absolute;
+        }
+    }
 }
 
 
@@ -80,6 +92,10 @@
         max-width: 24rem;
         margin: 8px auto 66px;
     }
+    @include mQ(1080px) {
+        text-align: left;
+        margin-left: 0;
+    }
 
 }
 
@@ -92,6 +108,10 @@
         max-width: 24rem;
         margin: auto;
     }
+    @include mQ(1080px) {
+        text-align: left;
+        margin-left: 0;
+    }
 }
 
 .card__img {
@@ -99,6 +119,9 @@
 
     img {
         max-width: 90%;
+    }
+    @include mQ(1080px) {
+        box-shadow: none;
     }
 }
 
@@ -115,6 +138,9 @@
             content: url("../assets/images/patterns/pattern-lines.svg");
             // background-color: aqua;
         }
+    }
+    @include mQ(1080px) {
+        flex-direction: row-reverse;
     }
 
 }
