@@ -1,0 +1,146 @@
+.card {
+    @include mQ(1080px) {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;  
+        padding: 0px 110px;      
+    }
+    @include mQ(1440px){
+        padding: 0 165px;
+        align-items: flex-end; 
+    }
+}
+
+.cards__section {
+    position: relative;
+    top: 148px;
+
+    @include mQ(680px) {
+        top: 321px;
+
+        &::before,
+        &::after {
+            position: absolute;
+            width: 49%;
+            height: 320px;
+            background-color: #ededed;
+            content: "";
+            z-index: -1;
+        }
+
+        &::before {
+            left: 0;
+            top: 198px;
+            border-top-right-radius: 100px;
+        }
+
+        &::after {
+            bottom: -112px;
+            border-top-left-radius: 70px;
+        }
+
+    }
+
+    @include mQ(1080px) {
+        top: -58px;
+        &::before {
+            top: 310px;
+            width: 62%;
+        }
+    }
+
+}
+
+.card__main {
+    position: relative;
+    margin-top: 24px;
+    padding: 0 25px;
+    margin-bottom: 76px;
+
+    &::before {
+        position: relative;
+        content: url("../assets/images/patterns/pattern-divide.svg");
+        top: 12px;
+    }
+
+    @include mQ(680px) {
+        margin-bottom: 120px;
+
+        &::before {
+            top: 24px;
+        }
+    }
+
+    @include mQ(1080px) {
+        &::before {
+            left: 24px;
+            position: absolute;
+        }
+    }
+}
+
+
+.card__main__title {
+    padding-top: 43px;
+    font-size: calculateRem(32);
+    font-weight: 800;
+    letter-spacing: -0.4px;
+    line-height: 40px;
+    margin-bottom: 20px;
+
+    @include mQ(680px) {
+        max-width: 24rem;
+        margin: 8px auto 66px;
+    }
+    @include mQ(1080px) {
+        text-align: left;
+        margin-left: 0;
+    }
+
+}
+
+.card__main__descr {
+    line-height: 25px;
+    letter-spacing: -0.19px;
+    font-size: calculateRem(15);
+
+    @include mQ(680px) {
+        max-width: 24rem;
+        margin: auto;
+    }
+    @include mQ(1080px) {
+        text-align: left;
+        margin-left: 0;
+    }
+}
+
+.card__img {
+    box-shadow: 0px 38px 20px 17px #ededed;
+
+    img {
+        max-width: 90%;
+    }
+    @include mQ(1080px) {
+        box-shadow: none;
+    }
+}
+
+.imageStyle {
+    @include mQ(680px) {
+        position: relative;
+
+        &::before {
+            top: 228px;
+            position: absolute;
+            right: 40px;
+            // width: 100%;
+            // height: 300px;
+            content: url("../assets/images/patterns/pattern-lines.svg");
+            // background-color: aqua;
+        }
+    }
+    @include mQ(1080px) {
+        flex-direction: row-reverse;
+    }
+
+}
