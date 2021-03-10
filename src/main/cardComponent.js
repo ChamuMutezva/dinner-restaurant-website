@@ -1,5 +1,6 @@
 const CardComponent = (props) => {
     let className = props.imageStyle ? "imageStyle" :  ""
+    
     return (
         <div className={`card ${className}`}>
             <picture className="card__img">

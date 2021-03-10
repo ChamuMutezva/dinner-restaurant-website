@@ -81,37 +81,11 @@
 
 
 .card__main__title {
-    padding-top: 43px;
-    font-size: calculateRem(32);
-    font-weight: 800;
-    letter-spacing: -0.4px;
-    line-height: 40px;
-    margin-bottom: 20px;
-
-    @include mQ(680px) {
-        max-width: 24rem;
-        margin: 8px auto 66px;
-    }
-    @include mQ(1080px) {
-        text-align: left;
-        margin-left: 0;
-    }
-
+   @include cardHeadings;
 }
 
 .card__main__descr {
-    line-height: 25px;
-    letter-spacing: -0.19px;
-    font-size: calculateRem(15);
-
-    @include mQ(680px) {
-        max-width: 24rem;
-        margin: auto;
-    }
-    @include mQ(1080px) {
-        text-align: left;
-        margin-left: 0;
-    }
+   @include cardDescriptions;
 }
 
 .card__img {

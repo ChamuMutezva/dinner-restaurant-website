@@ -10,4 +10,28 @@ body {
     font-family: 'Spartan', sans-serif;
     font-size: 16px;
 }
+.menu__section {
+	top: 150px;
+	position: relative;
+    background-color: $dark-bg;
+    color: $white-tx;
+    padding: 72px 24px;
+
+    &::before {
+        position: relative;
+        content: url('../assets/images/patterns/pattern-divide.svg')
+    }
+}
+.menu__headings__title {
+    @include cardHeadings;
+}
+.menu__headings__descr {
+    @include cardDescriptions;
+}
+.menu__cards {
+	margin-top: 40px;
+    h2 {
+        font-size: calcurateRem(18);
+    }
+}
 
