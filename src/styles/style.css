@@ -381,7 +381,7 @@ body {
   position: relative;
   background-color: #111111;
   color: #ffffff;
-  padding: 72px 24px;
+  padding: 62px 24px;
 }
 
 .menu__section::before {
@@ -392,6 +392,19 @@ body {
 @media screen and (min-width: 680px) {
   .menu__section {
     top: 315px;
+    margin-bottom: -202px;
+  }
+  .menu__section::before {
+    top: 27px;
+  }
+}
+
+@media screen and (min-width: 1080px) {
+  .menu__section {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    top: 58px;
   }
 }
 
@@ -402,6 +415,7 @@ body {
   letter-spacing: -0.4px;
   line-height: 40px;
   margin-bottom: 20px;
+  padding-top: 32px;
 }
 
 @media screen and (min-width: 680px) {
@@ -415,6 +429,13 @@ body {
   .menu__headings__title {
     text-align: left;
     margin-left: 0;
+  }
+}
+
+@media screen and (min-width: 680px) {
+  .menu__headings__title {
+    margin: 27px auto 66px;
+    max-width: 20rem;
   }
 }
 
@@ -439,7 +460,13 @@ body {
 }
 
 .menu__cards {
-  margin-top: 40px;
+  margin-top: 60px;
+}
+
+@media screen and (min-width: 680px) {
+  .menu__cards {
+    margin-top: 26px;
+  }
 }
 
 .menuTitle {
@@ -464,32 +491,59 @@ body {
 .hideBefore {
   top: -45px;
   margin-bottom: -8px;
+  /*
+    &::after {
+        content: "";
+        width: 100%;
+        position: absolute;
+        height: 1px;
+        background-color: $lt-grey-bg;
+        left: 0;
+        bottom: -10px;
+    } */
 }
 
 .hideBefore::before {
   content: "";
 }
 
-.hideBefore::after {
+.cardMenu {
+  position: relative;
+}
+
+.cardMenu::after {
   content: "";
   width: 100%;
   position: absolute;
   height: 1px;
   background-color: #979797;
   left: 0;
-  bottom: -16px;
+  bottom: 31px;
 }
 
-.cardMenu {
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
-  -webkit-box-pack: center;
-      -ms-flex-pack: center;
-          justify-content: center;
-  -webkit-box-align: center;
-      -ms-flex-align: center;
-          align-items: center;
-  padding: 0 97px;
+@media screen and (min-width: 680px) {
+  .cardMenu {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-pack: center;
+        -ms-flex-pack: center;
+            justify-content: center;
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
+    padding: 0 97px;
+  }
+}
+
+@media screen and (min-width: 1080px) {
+  .cardMenu {
+    margin-bottom: 60px;
+  }
+  .cardMenu::after {
+    width: 80%;
+    left: auto;
+    bottom: -30px;
+  }
 }
 /*# sourceMappingURL=style.css.map */
