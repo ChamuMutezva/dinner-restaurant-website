@@ -340,7 +340,7 @@ button {
 }
 
 .card__img img {
-  max-width: 90%;
+  max-width: 100%;
 }
 
 @media screen and (min-width: 1080px) {
@@ -436,7 +436,35 @@ body {
   margin-top: 40px;
 }
 
-.menu__cards h2 {
-  font-size: calcurateRem(18);
+.menuTitle {
+  font-size: 1.125rem;
+}
+
+.cardShadow {
+  -webkit-box-shadow: none;
+          box-shadow: none;
+}
+
+.cardShadow img {
+  max-width: 100%;
+}
+
+.hideBefore {
+  top: -45px;
+  margin-bottom: -8px;
+}
+
+.hideBefore::before {
+  content: "";
+}
+
+.hideBefore::after {
+  content: "";
+  width: 100%;
+  position: absolute;
+  height: 1px;
+  background-color: #979797;
+  left: 0;
+  bottom: -16px;
 }
 /*# sourceMappingURL=style.css.map */

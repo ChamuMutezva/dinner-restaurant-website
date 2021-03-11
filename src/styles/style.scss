@@ -10,9 +10,10 @@ body {
     font-family: 'Spartan', sans-serif;
     font-size: 16px;
 }
+
 .menu__section {
-	top: 150px;
-	position: relative;
+    top: 150px;
+    position: relative;
     background-color: $dark-bg;
     color: $white-tx;
     padding: 72px 24px;
@@ -22,16 +23,50 @@ body {
         content: url('../assets/images/patterns/pattern-divide.svg')
     }
 }
+
 .menu__headings__title {
     @include cardHeadings;
 }
+
 .menu__headings__descr {
     @include cardDescriptions;
 }
+
 .menu__cards {
-	margin-top: 40px;
-    h2 {
-        font-size: calcurateRem(18);
+    margin-top: 40px;
+}
+
+.menuTitle {
+    font-size: calculateRem(18);
+}
+
+.cardShadow {
+    box-shadow: none;
+
+    img {
+        max-width: 100%;
     }
 }
 
+// 
+.hideBefore {
+    top: -45px;
+    margin-bottom: -8px;
+
+    &::before {
+        content: "";
+    }
+
+    &::after {
+        content: "";
+        width: 100%;
+        position: absolute;
+        height: 1px;
+        background-color: $lt-grey-bg;
+        left: 0;
+        bottom: -16px;
+    }
+}
+.menuDescr {
+   // font-size: calculateRem(15);
+}
