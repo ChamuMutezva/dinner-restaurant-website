@@ -6,6 +6,7 @@
 @import 'main';
 @import 'card';
 
+// nb : js changed classes are camelCased;
 body {
     font-family: 'Spartan', sans-serif;
     font-size: 16px;
@@ -21,6 +22,10 @@ body {
     &::before {
         position: relative;
         content: url('../assets/images/patterns/pattern-divide.svg')
+    }
+
+    @include mQ(680px) {
+        top: 315px;
     }
 }
 
@@ -38,6 +43,11 @@ body {
 
 .menuTitle {
     font-size: calculateRem(18);
+
+    @include mQ(680px) {
+        margin: 2px auto 10px;
+    }
+
 }
 
 .cardShadow {
@@ -67,6 +77,14 @@ body {
         bottom: -16px;
     }
 }
+
 .menuDescr {
-   // font-size: calculateRem(15);
+    // font-size: calculateRem(15);
+}
+
+.cardMenu {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 0 97px;
 }

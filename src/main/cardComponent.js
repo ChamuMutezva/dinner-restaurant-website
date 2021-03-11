@@ -4,8 +4,9 @@ const CardComponent = (props) => {
     let shadow = props.cardShadow ? "cardShadow" : ""
     let hideBefore = props.hideBefore ? "hideBefore" : ""
     let menuDescr = props.menuDescr ? "menuDescr" : ""
+    let cardMenu = props.cardMenu ? "cardMenu" : ""
     return (
-        <div className={`card ${className}`}>
+        <div className={`card ${className} ${cardMenu}`}>
             <picture className={`card__img ${shadow}`}>
                 <source media="(max-width: 680px)" srcSet={props.srcSet1} />
                 <source media="(max-width: 1080px)" srcSet={props.srcSet2} />
