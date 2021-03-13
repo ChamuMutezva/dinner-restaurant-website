@@ -5,6 +5,7 @@
 @import 'header';
 //@import 'main';
 @import 'card';
+@import 'menu';
 
 // nb : js changed classes are camelCased;
 body {
@@ -12,140 +13,43 @@ body {
     font-size: 16px;
 }
 
-.menu__section {
-    top: 150px;
+.cta {
     position: relative;
-    background-color: $dark-bg;
-    color: $white-tx;
-    padding: 62px 24px;
+    top: 200px;
 
-    &::before {
+    .link__to__page {
         position: relative;
-        content: url('../assets/images/patterns/pattern-divide.svg')
+        color: $dark-tx;
+        font-size: calculateRem(14);
+        line-height: 28px;
+        border: none;
+        outline: none;
+
+        &:hover {
+            font-weight: 800;
+        }
+
+        &:focus {
+            font-weight: 800;
+            
+            &::before {
+                position: absolute;
+                content: "";
+                width: 100px;
+                height: 3px;
+                background-color: black;
+                top: 60px;
+                left: 30%;
+            }
+        }
     }
 
-    @include mQ(680px) {
-        top: 315px;
-        margin-bottom: -202px;
-
-        &::before {
-            top: 27px;
-        }
+    .cta__descr {
+        margin-top: 35px;
     }
 
     @include mQ(1080px) {
-        display: flex;
-        top: 58px;
-        padding: 145px 125px;
+        top: 300px;
     }
 
-    @include mQ(1440px) {      
-        top: -140px;
-        padding: 185px 165px;
-    }
-
-}
-
-.menu__headings {
-    @include mQ(1440px){
-        margin-left: -75px;
-    }
-}
-
-.menu__headings__title {
-    @include cardHeadings;
-  
-}
-
-.menu__headings__descr {
-    @include cardDescriptions;
-}
-
-.menu__cards {
-    margin-top: 60px;
-
-    @include mQ(680px) {
-        margin-top: 26px;
-    }
-}
-
-.menuTitle {
-    font-size: calculateRem(18);
-
-    @include mQ(680px) {
-        margin: 2px auto 10px;
-    }
-
-}
-
-.cardShadow {
-    box-shadow: none;
-
-    img {
-        max-width: 100%;
-    }
-}
-
-// 
-.hideBefore {
-    top: -45px;
-    margin-bottom: -8px;
-
-    &::before {
-        content: "";
-    }
-
-    /*
-    &::after {
-        content: "";
-        width: 100%;
-        position: absolute;
-        height: 1px;
-        background-color: $lt-grey-bg;
-        left: 0;
-        bottom: -10px;
-    } */
-}
-
-.menuDescr {
-    // font-size: calculateRem(15);
-}
-
-.cardMenu {
-    position: relative;
-
-    &::after {
-        content: "";
-        width: 100%;
-        position: absolute;
-        height: 1px;
-        background-color: $lt-grey-bg;
-        left: 0;
-        bottom: 31px;
-    }
-
-    @include mQ(680px) {
-        display: flex;
-        justify-content: center;
-        align-items: center;
-        padding: 0 97px;
-    }
-
-    @include mQ(1080px) {       
-        margin-bottom: 60px;
-       // z-index: 5;
-        &::after {
-            width: 80%;
-            left: auto;
-            bottom: -30px;
-        }
-        &::before {
-            content: url('../assets/images/patterns/pattern-divide.svg');
-            position: absolute;
-            top: 40px;
-            left: 250px;
-            z-index: -1;
-        }
-
-    }
 }

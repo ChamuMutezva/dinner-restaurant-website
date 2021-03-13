@@ -400,11 +400,6 @@ button {
   }
 }
 
-body {
-  font-family: 'Spartan', sans-serif;
-  font-size: 16px;
-}
-
 .menu__section {
   top: 150px;
   position: relative;
@@ -533,16 +528,6 @@ body {
 .hideBefore {
   top: -45px;
   margin-bottom: -8px;
-  /*
-    &::after {
-        content: "";
-        width: 100%;
-        position: absolute;
-        height: 1px;
-        background-color: $lt-grey-bg;
-        left: 0;
-        bottom: -10px;
-    } */
 }
 
 .hideBefore::before {
@@ -593,6 +578,53 @@ body {
     top: 40px;
     left: 250px;
     z-index: -1;
+  }
+}
+
+body {
+  font-family: 'Spartan', sans-serif;
+  font-size: 16px;
+}
+
+.cta {
+  position: relative;
+  top: 200px;
+}
+
+.cta .link__to__page {
+  position: relative;
+  color: #111111;
+  font-size: 0.875rem;
+  line-height: 28px;
+  border: none;
+  outline: none;
+}
+
+.cta .link__to__page:hover {
+  font-weight: 800;
+}
+
+.cta .link__to__page:focus {
+  font-weight: 800;
+}
+
+.cta .link__to__page:focus::before {
+  position: absolute;
+  content: "";
+  width: 100px;
+  height: 3px;
+  background-color: black;
+  top: 60px;
+  left: 30%;
+}
+
+.cta .cta__descr {
+  margin-top: 35px;
+}
+
+@media screen and (min-width: 1080px) {
+  .cta {
+    top: 300px;
   }
 }
 /*# sourceMappingURL=style.css.map */
