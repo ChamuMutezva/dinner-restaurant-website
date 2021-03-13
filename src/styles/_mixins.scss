@@ -1,11 +1,11 @@
-@mixin  mQ($arg) {
+@mixin mQ($arg) {
     @media screen and (min-width: $arg) {
         @content;
-    }    
+    }
 }
 
-@mixin cardHeadings {
-    padding-top: 43px;
+@mixin cardHeadings {    
+    padding-top: 32px;
     font-size: calculateRem(32);
     font-weight: 800;
     letter-spacing: -0.4px;
@@ -13,12 +13,21 @@
     margin-bottom: 20px;
 
     @include mQ(680px) {
-        max-width: 24rem;
-        margin: 8px auto 66px;
+       // max-width: 24rem;
+       // margin: 8px auto 66px;
+        margin: 27px auto 66px;
+        max-width: 20rem;
     }
+
     @include mQ(1080px) {
         text-align: left;
         margin-left: 0;
+        margin-top: 120px;
+    }
+
+    @include mQ(1440px) {
+        margin-top: 70px;
+        //width: 85%;
     }
 }
 
@@ -31,11 +40,13 @@
         max-width: 24rem;
         margin: auto;
     }
+
     @include mQ(1080px) {
         text-align: left;
         margin-left: 0;
     }
 }
+
 // Function for converting a px based font-size to rem.
 @function calculateRem($size) {
     $remSize: $size / 16;

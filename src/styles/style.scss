@@ -3,7 +3,7 @@
 @import 'variables';
 @import 'mixins';
 @import 'header';
-@import 'main';
+//@import 'main';
 @import 'card';
 
 // nb : js changed classes are camelCased;
@@ -36,18 +36,25 @@ body {
     @include mQ(1080px) {
         display: flex;
         top: 58px;
+        padding: 145px 125px;
+    }
+
+    @include mQ(1440px) {      
+        top: -140px;
+        padding: 185px 165px;
     }
 
 }
 
+.menu__headings {
+    @include mQ(1440px){
+        margin-left: -75px;
+    }
+}
+
 .menu__headings__title {
     @include cardHeadings;
-    padding-top: 32px;
-
-    @include mQ(680px) {
-        margin: 27px auto 66px;
-        max-width: 20rem;
-    }
+  
 }
 
 .menu__headings__descr {
@@ -126,10 +133,18 @@ body {
 
     @include mQ(1080px) {       
         margin-bottom: 60px;
+       // z-index: 5;
         &::after {
             width: 80%;
             left: auto;
             bottom: -30px;
+        }
+        &::before {
+            content: url('../assets/images/patterns/pattern-divide.svg');
+            position: absolute;
+            top: 40px;
+            left: 250px;
+            z-index: -1;
         }
 
     }

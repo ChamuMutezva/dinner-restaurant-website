@@ -7,7 +7,9 @@
     }
     @include mQ(1440px){
         padding: 0 165px;
-        align-items: flex-end; 
+       // align-items: flex-end; 
+        margin-top: -12px;
+        z-index: 20;
     }
 }
 
@@ -47,6 +49,11 @@
             top: 310px;
             width: 62%;
         }
+        &::after {
+            bottom: 45px;  
+            width: 62%;   
+            right: 0;     
+        }
     }
 
 }
@@ -72,16 +79,25 @@
     }
 
     @include mQ(1080px) {
+        padding: 0 61px;
         &::before {
-            left: 24px;
-            position: absolute;
+            left: 61px;
+            
+            position: absolute;           
+        }
+    }
+
+    @include mQ(1080px) {
+       
+        &::before {
+            top: 132px;          
         }
     }
 }
 
 
 .card__main__title {
-   @include cardHeadings;
+   @include cardHeadings;  
 }
 
 .card__main__descr {
@@ -115,6 +131,9 @@
     }
     @include mQ(1080px) {
         flex-direction: row-reverse;
+    }
+    @include mQ(1440px) {
+        margin-top: 118px;
     }
 
 }
