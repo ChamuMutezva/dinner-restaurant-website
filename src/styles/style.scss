@@ -90,13 +90,12 @@ body {
     position: relative;
 }
 
-.special, 
-.social {
-       
+.cta__events__img {
+    position: relative;
 }
 
 .ctaHide {
-    visibility: hidden;    
+    visibility: hidden;
     position: absolute;
     top: 0;
 }

@@ -707,6 +707,10 @@ body {
   position: relative;
 }
 
+.cta__events__img {
+  position: relative;
+}
+
 .ctaHide {
   visibility: hidden;
   position: absolute;
