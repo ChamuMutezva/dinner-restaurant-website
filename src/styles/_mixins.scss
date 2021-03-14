@@ -4,7 +4,7 @@
     }
 }
 
-@mixin cardHeadings {    
+@mixin cardHeadings {
     padding-top: 32px;
     font-size: calculateRem(32);
     font-weight: 800;
@@ -13,8 +13,8 @@
     margin-bottom: 20px;
 
     @include mQ(680px) {
-       // max-width: 24rem;
-       // margin: 8px auto 66px;
+        // max-width: 24rem;
+        // margin: 8px auto 66px;
         margin: 27px auto 66px;
         max-width: 20rem;
     }

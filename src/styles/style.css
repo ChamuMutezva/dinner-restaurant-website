@@ -127,7 +127,7 @@ table {
   }
 }
 
-button {
+.call__to__action--btn {
   font-size: 0.875rem;
   width: 15.3125rem;
   line-height: 16px;
@@ -140,7 +140,7 @@ button {
 }
 
 @media screen and (min-width: 1080px) {
-  button {
+  .call__to__action--btn {
     display: block;
     margin: 0;
   }
@@ -591,7 +591,23 @@ body {
   top: 200px;
 }
 
-.cta .link__to__page {
+.cta .cta__descr {
+  margin-top: 35px;
+}
+
+@media screen and (min-width: 680px) {
+  .cta {
+    top: 550px;
+  }
+}
+
+@media screen and (min-width: 1080px) {
+  .cta {
+    top: 300px;
+  }
+}
+
+.ctaBtnSecondary {
   position: relative;
   color: #111111;
   font-size: 0.875rem;
@@ -600,15 +616,15 @@ body {
   outline: none;
 }
 
-.cta .link__to__page:hover {
+.ctaBtnSecondary:hover {
   font-weight: 800;
 }
 
-.cta .link__to__page:focus {
+.ctaBtnSecondary:focus {
   font-weight: 800;
 }
 
-.cta .link__to__page:focus::before {
+.ctaBtnSecondary:focus::before {
   position: absolute;
   content: "";
   width: 100px;
@@ -618,13 +634,63 @@ body {
   left: 30%;
 }
 
-.cta .cta__descr {
-  margin-top: 35px;
+.cta__descr__hero__cat {
+  padding: 0 12px;
+}
+
+.cta__descr__hero__cat__title {
+  padding-top: 32px;
+  font-size: 2rem;
+  font-weight: 800;
+  letter-spacing: -0.4px;
+  line-height: 40px;
+  margin-bottom: 20px;
+  color: #242b37;
+}
+
+@media screen and (min-width: 680px) {
+  .cta__descr__hero__cat__title {
+    margin: 27px auto 66px;
+    max-width: 20rem;
+  }
 }
 
 @media screen and (min-width: 1080px) {
-  .cta {
-    top: 300px;
+  .cta__descr__hero__cat__title {
+    text-align: left;
+    margin-left: 0;
+    margin-top: 120px;
   }
+}
+
+@media screen and (min-width: 1440px) {
+  .cta__descr__hero__cat__title {
+    margin-top: 70px;
+  }
+}
+
+.cta__descr__hero__cat__summary {
+  line-height: 25px;
+  letter-spacing: -0.19px;
+  font-size: 0.9375rem;
+  color: #242b37;
+}
+
+@media screen and (min-width: 680px) {
+  .cta__descr__hero__cat__summary {
+    max-width: 24rem;
+    margin: auto;
+  }
+}
+
+@media screen and (min-width: 1080px) {
+  .cta__descr__hero__cat__summary {
+    text-align: left;
+    margin-left: 0;
+  }
+}
+
+.ctaBtnPrimary {
+  background-color: black;
 }
 /*# sourceMappingURL=style.css.map */

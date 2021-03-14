@@ -4,6 +4,7 @@ import gatheringTablet from '../assets/images/homepage/family-gathering-tablet.j
 import gatheringTablet2x from '../assets/images/homepage/family-gathering-tablet@2x.jpg'
 import gatheringDesktop from '../assets/images/homepage/family-gathering-desktop.jpg'
 import gatheringDesktop2x from '../assets/images/homepage/family-gathering-desktop@2x.jpg'
+import Button from '../shared-components/Button'
 
 const Gatherings = () => {
     return (
@@ -17,12 +18,22 @@ const Gatherings = () => {
             <div className="cta__descr">
                 <nav>
                     <ul>
-                        <li><button className="link__to__page">Family Gathering</button></li>
-                        <li><button className="link__to__page">Special Events</button></li>
-                        <li><button className="link__to__page">Social Events</button></li>
+                        <li><Button title="Family Gathering" secondary={true} /></li>
+                        <li><Button title="Special Events" secondary={true}/></li>
+                        <li><Button title="Social Events" secondary={true}/></li>
                     </ul>
                 </nav>
-
+                <div className="cta__descr__hero">
+                    <div className="cta__descr__hero__cat">
+                        <h2 className="cta__descr__hero__cat__title">Family Gathering</h2>
+                        <p className="cta__descr__hero__cat__summary"> We love catering for entire families.
+                        So please bring everyone along for a special meal with your
+                        loved ones. We’ll provide a memorable experience for all.
+                        </p>
+                    </div>
+                    <Button title="Book a table" primary={true} />
+                    {/*<button className="cta__descr__hero--btn">Book a table</button> */}
+                </div>
             </div>
 
         </section>

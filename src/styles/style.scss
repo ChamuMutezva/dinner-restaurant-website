@@ -13,43 +13,70 @@ body {
     font-size: 16px;
 }
 
+// cta = call__to__action
 .cta {
     position: relative;
     top: 200px;
 
-    .link__to__page {
-        position: relative;
-        color: $dark-tx;
-        font-size: calculateRem(14);
-        line-height: 28px;
-        border: none;
-        outline: none;
-
-        &:hover {
-            font-weight: 800;
-        }
-
-        &:focus {
-            font-weight: 800;
-            
-            &::before {
-                position: absolute;
-                content: "";
-                width: 100px;
-                height: 3px;
-                background-color: black;
-                top: 60px;
-                left: 30%;
-            }
-        }
-    }
-
     .cta__descr {
         margin-top: 35px;
+    }
+
+    @include mQ(680px) {
+        top: 550px;
     }
 
     @include mQ(1080px) {
         top: 300px;
     }
 
+}
+
+.ctaBtnSecondary {
+    position: relative;
+    color: $dark-tx;
+    font-size: calculateRem(14);
+    line-height: 28px;
+    border: none;
+    outline: none;
+
+    &:hover {
+        font-weight: 800;
+    }
+
+    &:focus {
+        font-weight: 800;
+
+        &::before {
+            position: absolute;
+            content: "";
+            width: 100px;
+            height: 3px;
+            background-color: black;
+            top: 60px;
+            left: 30%;
+        }
+    }
+}
+
+.cta__descr__hero__cat {
+    padding: 0 12px;
+}
+
+.cta__descr__hero__cat__title {
+    @include cardHeadings;
+    //	font-size: calculateRem(32);
+    //	font-weight: 800;
+    //	line-height: 40px;
+    //	letter-spacing: -0.4px;
+    color: #242b37;
+}
+
+.cta__descr__hero__cat__summary {
+    @include cardDescriptions;
+    color: #242b37;
+}
+
+.ctaBtnPrimary {
+    background-color: black;
 }
