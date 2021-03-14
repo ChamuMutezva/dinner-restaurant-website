@@ -33,7 +33,7 @@ body {
 }
 
 .cta__descr {
-	margin-top: 36px;
+    margin-top: 36px;
 }
 
 .ctaBtnSecondary {
@@ -45,9 +45,10 @@ body {
     outline: none;
     padding: 10px;
     font-weight: 800;
+
     &:hover {
-       color: $dark-tx;
-       cursor: pointer;
+        color: $dark-tx;
+        cursor: pointer;
     }
 
     &:focus {
@@ -86,11 +87,20 @@ body {
 }
 
 .cta__descr__hero {
-	position: relative;
+    position: relative;
 }
 
-.special, .social {
-	position: absolute;
-	top: 0;
-	visibility: hidden;
+.special, 
+.social {
+       
+}
+
+.ctaHide {
+    visibility: hidden;    
+    position: absolute;
+    top: 0;
+}
+
+.cta__img img {
+    box-shadow: 0px 20px 20px 0px grey;
 }

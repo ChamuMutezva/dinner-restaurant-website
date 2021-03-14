@@ -19,20 +19,20 @@ const Gatherings = () => {
             <div className="cta__descr">
                 <nav>
                     <ul>
-                        <li><Button title="Family Gathering" secondary={true} /></li>
-                        <li><Button title="Special Events" secondary={true} /></li>
-                        <li><Button title="Social Events" secondary={true} /></li>
+                        <li><Button title="Family Gathering" secondary={true} familyMatch={true} /></li>
+                        <li><Button title="Special Events" secondary={true} specialMatch={true} /></li>
+                        <li><Button title="Social Events" secondary={true} socialMatch={true} /></li>
                     </ul>
                 </nav>
                 <div className="cta__descr__hero">
-                    <div className="family">
+                    <div className="family cta__msg familyMatch">
                         <Events eventTitle="Family Gathering"
                             eventDescr="We love catering for entire families.
                                          So please bring everyone along for a special meal with your
                                         loved ones. We’ll provide a memorable experience for all." />
                     </div>
 
-                    <div className="special">
+                    <div className="special cta__msg specialMatch ctaHide">
                         <Events eventTitle="Special Events"
                             eventDescr="Whether it’s a romantic dinner or special date you’re
                                     celebrating with others we’ll look after you. 
@@ -40,7 +40,7 @@ const Gatherings = () => {
 
                     </div>
 
-                    <div className="social">
+                    <div className="social cta__msg socialMatch ctaHide">
                         <Events eventTitle="Social Events"
                             eventDescr="Are you looking to have a larger social event? No problem!
                                         We’re more than happy to cater for big 
