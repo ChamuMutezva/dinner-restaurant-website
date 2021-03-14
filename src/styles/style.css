@@ -607,21 +607,28 @@ body {
   }
 }
 
+.cta__descr {
+  margin-top: 36px;
+}
+
 .ctaBtnSecondary {
   position: relative;
-  color: #111111;
+  color: #979797;
   font-size: 0.875rem;
   line-height: 28px;
   border: none;
   outline: none;
+  padding: 10px;
+  font-weight: 800;
 }
 
 .ctaBtnSecondary:hover {
-  font-weight: 800;
+  color: #111111;
+  cursor: pointer;
 }
 
 .ctaBtnSecondary:focus {
-  font-weight: 800;
+  color: #242b37;
 }
 
 .ctaBtnSecondary:focus::before {
@@ -629,8 +636,8 @@ body {
   content: "";
   width: 100px;
   height: 3px;
-  background-color: black;
-  top: 60px;
+  background-color: #242b37;
+  top: 40px;
   left: 30%;
 }
 
@@ -645,6 +652,7 @@ body {
   letter-spacing: -0.4px;
   line-height: 40px;
   margin-bottom: 20px;
+  padding-top: 12px;
   color: #242b37;
 }
 
@@ -692,5 +700,16 @@ body {
 
 .ctaBtnPrimary {
   background-color: black;
+  margin-top: 30px;
+}
+
+.cta__descr__hero {
+  position: relative;
+}
+
+.special, .social {
+  position: absolute;
+  top: 0;
+  visibility: hidden;
 }
 /*# sourceMappingURL=style.css.map */

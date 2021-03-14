@@ -5,6 +5,7 @@ import gatheringTablet2x from '../assets/images/homepage/family-gathering-tablet
 import gatheringDesktop from '../assets/images/homepage/family-gathering-desktop.jpg'
 import gatheringDesktop2x from '../assets/images/homepage/family-gathering-desktop@2x.jpg'
 import Button from '../shared-components/Button'
+import Events from '../shared-components/Events'
 
 const Gatherings = () => {
     return (
@@ -19,19 +20,36 @@ const Gatherings = () => {
                 <nav>
                     <ul>
                         <li><Button title="Family Gathering" secondary={true} /></li>
-                        <li><Button title="Special Events" secondary={true}/></li>
-                        <li><Button title="Social Events" secondary={true}/></li>
+                        <li><Button title="Special Events" secondary={true} /></li>
+                        <li><Button title="Social Events" secondary={true} /></li>
                     </ul>
                 </nav>
                 <div className="cta__descr__hero">
-                    <div className="cta__descr__hero__cat">
-                        <h2 className="cta__descr__hero__cat__title">Family Gathering</h2>
-                        <p className="cta__descr__hero__cat__summary"> We love catering for entire families.
-                        So please bring everyone along for a special meal with your
-                        loved ones. We’ll provide a memorable experience for all.
-                        </p>
+                    <div className="family">
+                        <Events eventTitle="Family Gathering"
+                            eventDescr="We love catering for entire families.
+                                         So please bring everyone along for a special meal with your
+                                        loved ones. We’ll provide a memorable experience for all." />
                     </div>
+
+                    <div className="special">
+                        <Events eventTitle="Special Events"
+                            eventDescr="Whether it’s a romantic dinner or special date you’re
+                                    celebrating with others we’ll look after you. 
+                                    We’ll be sure to mark your special date with an unforgettable meal." />
+
+                    </div>
+
+                    <div className="social">
+                        <Events eventTitle="Social Events"
+                            eventDescr="Are you looking to have a larger social event? No problem!
+                                        We’re more than happy to cater for big 
+                                        parties. We’ll work with you to make your event a hit with everyone." />
+
+                    </div>
+
                     <Button title="Book a table" primary={true} />
+
                     {/*<button className="cta__descr__hero--btn">Book a table</button> */}
                 </div>
             </div>

@@ -32,28 +32,34 @@ body {
 
 }
 
+.cta__descr {
+	margin-top: 36px;
+}
+
 .ctaBtnSecondary {
     position: relative;
-    color: $dark-tx;
+    color: #979797;
     font-size: calculateRem(14);
     line-height: 28px;
     border: none;
     outline: none;
-
+    padding: 10px;
+    font-weight: 800;
     &:hover {
-        font-weight: 800;
+       color: $dark-tx;
+       cursor: pointer;
     }
 
     &:focus {
-        font-weight: 800;
+        color: #242b37;
 
         &::before {
             position: absolute;
             content: "";
             width: 100px;
             height: 3px;
-            background-color: black;
-            top: 60px;
+            background-color: #242b37;
+            top: 40px;
             left: 30%;
         }
     }
@@ -65,10 +71,7 @@ body {
 
 .cta__descr__hero__cat__title {
     @include cardHeadings;
-    //	font-size: calculateRem(32);
-    //	font-weight: 800;
-    //	line-height: 40px;
-    //	letter-spacing: -0.4px;
+    padding-top: 12px;
     color: #242b37;
 }
 
@@ -79,4 +82,15 @@ body {
 
 .ctaBtnPrimary {
     background-color: black;
+    margin-top: 30px;
+}
+
+.cta__descr__hero {
+	position: relative;
+}
+
+.special, .social {
+	position: absolute;
+	top: 0;
+	visibility: hidden;
 }
