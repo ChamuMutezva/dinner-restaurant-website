@@ -23,17 +23,46 @@ body {
     }
 
     @include mQ(680px) {
-        top: 550px;
+        top: 518px;
+        padding-top: 72px;
+
+        &::before {
+            position: absolute;
+            width: 378px;
+            height: 320px;
+            background-color: #ededed;
+            top: 0;
+            left: 0;
+            content: "";
+            border-radius: 0px 50px 0 0;
+        }
+
+        &::after {
+            position: absolute;
+            top: 35px;
+            left: 39px;
+            content: url("../assets/images/patterns/pattern-lines.svg");
+
+        }
+
     }
 
     @include mQ(1080px) {
         top: 300px;
+        display: flex;
+        padding: 0 165px;
+        justify-content: space-between;
     }
 
 }
 
 .cta__descr {
     margin-top: 36px;
+
+    @include mQ(1080px) {
+        display: flex;
+        flex-direction: column-reverse;
+    }
 }
 
 .ctaBtnSecondary {
@@ -64,6 +93,10 @@ body {
             left: 30%;
         }
     }
+
+    @include mQ(1080px) {
+        text-align: left;
+    }
 }
 
 .cta__descr__hero__cat {
@@ -84,6 +117,10 @@ body {
 .ctaBtnPrimary {
     background-color: black;
     margin-top: 30px;
+
+    @include mQ(1080px) {
+        margin-left: 12px;
+    }
 }
 
 .cta__descr__hero {
@@ -94,10 +131,23 @@ body {
     position: relative;
 }
 
+.cta__descr__list__items {
+    @include mQ(680px) {
+        display: flex;
+        justify-content: center;
+    }
+
+    @include mQ(1080px) {
+        flex-direction: column;
+    }
+}
+
 .ctaHide {
     visibility: hidden;
     position: absolute;
     top: 0;
+    // left: 8000px;
+    // transition: ease-out 1s;
 }
 
 .cta__img img {

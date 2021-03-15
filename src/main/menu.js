@@ -36,7 +36,9 @@ const Menu = () => {
                     title="Seared Salmon Fillet"
                     description=" Our locally sourced salmon served with
                  a refreshing buckwheat summer salad."
-                  menuTitle={true} cardShadow={true} hideBefore={true} menuDescr={true} cardMenu={true}/>
+                    menuTitle={true} cardShadow={true} hideBefore={true} menuDescr={true} cardMenu={true} />
+
+                <hr />
 
                 <CardComponent srcSet1={`${beefMobile}, ${beefMobile2x}`}
                     srcSet2={`${beefTabletDesktop}`}
@@ -46,9 +48,10 @@ const Menu = () => {
                     alt="Enjoy the delicious Rosemary Filet Mignon"
                     title="Rosemary Filet Mignon"
                     description="Our prime beef served to your taste with a
-                     delicious choice of seasonal sides." 
-                      menuTitle={true} cardShadow={true} hideBefore={true} menuDescr={true} cardMenu={true}/>
+                     delicious choice of seasonal sides."
+                    menuTitle={true} cardShadow={true} hideBefore={true} menuDescr={true} cardMenu={true} />
 
+                <hr />
 
                 <CardComponent srcSet1={`${chocolateMobile}, ${chocolateMobile2x}`}
                     srcSet2={`${chocolateTabletDesktop}`}
@@ -59,7 +62,7 @@ const Menu = () => {
                     title="Summer Fruit Chocolate Mousse"
                     description="Creamy mousse combined with summer fruits
                      and dark chocolate shavings."
-                      menuTitle={true} cardShadow={true} hideBefore={true} menuDescr={true} cardMenu={true}/>
+                    menuTitle={true} cardShadow={true} hideBefore={true} menuDescr={true} cardMenu={true} />
 
             </div>
         </section>

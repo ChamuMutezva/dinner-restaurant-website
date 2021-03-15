@@ -419,7 +419,7 @@ table {
     margin-bottom: -202px;
   }
   .menu__section::before {
-    top: 27px;
+    top: 12px;
   }
 }
 
@@ -476,6 +476,12 @@ table {
   }
 }
 
+@media screen and (min-width: 680px) {
+  .menu__headings__title {
+    margin: 15px auto 62px;
+  }
+}
+
 .menu__headings__descr {
   line-height: 25px;
   letter-spacing: -0.19px;
@@ -502,7 +508,7 @@ table {
 
 @media screen and (min-width: 680px) {
   .menu__cards {
-    margin-top: 26px;
+    margin-top: 35px;
   }
 }
 
@@ -536,16 +542,17 @@ table {
 
 .cardMenu {
   position: relative;
-}
-
-.cardMenu::after {
-  content: "";
-  width: 100%;
-  position: absolute;
-  height: 1px;
-  background-color: #979797;
-  left: 0;
-  bottom: 31px;
+  /*
+    &::after {
+        content: "";
+        width: 100%;
+        position: absolute;
+        height: 1px;
+        background-color: $lt-grey-bg;
+        left: 0;
+        bottom: 31px;
+    }
+*/
 }
 
 @media screen and (min-width: 680px) {
@@ -560,17 +567,26 @@ table {
         -ms-flex-align: center;
             align-items: center;
     padding: 0 97px;
+    /*
+        &::after {
+            width: 80%;
+            left: 13%;
+            bottom: 10px;
+        }
+        */
   }
 }
 
 @media screen and (min-width: 1080px) {
   .cardMenu {
     margin-bottom: 60px;
-  }
-  .cardMenu::after {
-    width: 80%;
-    left: auto;
-    bottom: -30px;
+    /*z-index: 5;
+        &::after {
+            width: 80%;
+            left: auto;
+            bottom: -30px;
+        }
+        */
   }
   .cardMenu::before {
     content: url("../assets/images/patterns/pattern-divide.svg");
@@ -597,18 +613,54 @@ body {
 
 @media screen and (min-width: 680px) {
   .cta {
-    top: 550px;
+    top: 518px;
+    padding-top: 72px;
+  }
+  .cta::before {
+    position: absolute;
+    width: 378px;
+    height: 320px;
+    background-color: #ededed;
+    top: 0;
+    left: 0;
+    content: "";
+    border-radius: 0px 50px 0 0;
+  }
+  .cta::after {
+    position: absolute;
+    top: 35px;
+    left: 39px;
+    content: url("../assets/images/patterns/pattern-lines.svg");
   }
 }
 
 @media screen and (min-width: 1080px) {
   .cta {
     top: 300px;
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    padding: 0 165px;
+    -webkit-box-pack: justify;
+        -ms-flex-pack: justify;
+            justify-content: space-between;
   }
 }
 
 .cta__descr {
   margin-top: 36px;
+}
+
+@media screen and (min-width: 1080px) {
+  .cta__descr {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: reverse;
+        -ms-flex-direction: column-reverse;
+            flex-direction: column-reverse;
+  }
 }
 
 .ctaBtnSecondary {
@@ -639,6 +691,12 @@ body {
   background-color: #242b37;
   top: 40px;
   left: 30%;
+}
+
+@media screen and (min-width: 1080px) {
+  .ctaBtnSecondary {
+    text-align: left;
+  }
 }
 
 .cta__descr__hero__cat {
@@ -703,12 +761,38 @@ body {
   margin-top: 30px;
 }
 
+@media screen and (min-width: 1080px) {
+  .ctaBtnPrimary {
+    margin-left: 12px;
+  }
+}
+
 .cta__descr__hero {
   position: relative;
 }
 
 .cta__events__img {
   position: relative;
+}
+
+@media screen and (min-width: 680px) {
+  .cta__descr__list__items {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-pack: center;
+        -ms-flex-pack: center;
+            justify-content: center;
+  }
+}
+
+@media screen and (min-width: 1080px) {
+  .cta__descr__list__items {
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+  }
 }
 
 .ctaHide {

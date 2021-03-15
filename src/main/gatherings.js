@@ -58,7 +58,7 @@ const Gatherings = () => {
             </div>
             <div className="cta__descr">
                 <nav>
-                    <ul>
+                    <ul className="cta__descr__list__items" >
                         <li><Button title="Family Gathering" secondary={true} familyMatch={true} /></li>
                         <li><Button title="Special Events" secondary={true} specialMatch={true} /></li>
                         <li><Button title="Social Events" secondary={true} socialMatch={true} /></li>
