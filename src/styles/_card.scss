@@ -70,15 +70,15 @@
     &::before {
         position: relative;
         content: url("../assets/images/patterns/pattern-divide.svg");
-        top: 12px;
+        top: 21px;
     }
 
     @include mQ(680px) {
-        margin-bottom: 120px;
-        flex: 2 1 60%;
+        margin-bottom: 114px;
+       // flex: 2 1 60%;
 
         &::before {
-            top: 24px;
+            top: 18px;
         }
     }
 

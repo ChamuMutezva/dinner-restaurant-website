@@ -11,12 +11,12 @@
     }
 
     @include mQ(680px) {
-        top: 315px;
+        top: 282px;
         margin-bottom: -202px;
         padding: 62px 97px;
 
         &::before {
-            top: 12px;
+            top: 25px;
         }
     }
 

@@ -12,18 +12,18 @@
     line-height: 40px;
     margin-bottom: 20px;
 
-    @include mQ(680px) {        
-        margin: 27px auto 66px;
-        max-width: 20rem;
+    @include mQ(680px) {
+        margin: 10px auto 24px;
+        max-width: 28rem;
+        line-height: 56px;
+        font-size: calculateRem(40);
+        letter-spacing: -0.5px;
     }
 
     @include mQ(1080px) {
         text-align: left;
         margin-left: 0;
         margin-top: 120px;
-        font-size: calculateRem(40);
-        line-height: 56px;
-        letter-spacing: -0.5px;
         max-width: 30rem;
     }
 
@@ -41,6 +41,8 @@
     @include mQ(680px) {
         max-width: 24rem;
         margin: auto;
+        line-height: 30px;
+        letter-spacing: -0.22px;
     }
 
     @include mQ(1080px) {

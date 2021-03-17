@@ -279,18 +279,15 @@ table {
 .card__main::before {
   position: relative;
   content: url("../assets/images/patterns/pattern-divide.svg");
-  top: 12px;
+  top: 21px;
 }
 
 @media screen and (min-width: 680px) {
   .card__main {
-    margin-bottom: 120px;
-    -webkit-box-flex: 2;
-        -ms-flex: 2 1 60%;
-            flex: 2 1 60%;
+    margin-bottom: 114px;
   }
   .card__main::before {
-    top: 24px;
+    top: 18px;
   }
 }
 
@@ -321,8 +318,11 @@ table {
 
 @media screen and (min-width: 680px) {
   .card__main__title {
-    margin: 27px auto 66px;
-    max-width: 20rem;
+    margin: 10px auto 24px;
+    max-width: 28rem;
+    line-height: 56px;
+    font-size: 2.5rem;
+    letter-spacing: -0.5px;
   }
 }
 
@@ -331,9 +331,6 @@ table {
     text-align: left;
     margin-left: 0;
     margin-top: 120px;
-    font-size: 2.5rem;
-    line-height: 56px;
-    letter-spacing: -0.5px;
     max-width: 30rem;
   }
 }
@@ -355,6 +352,8 @@ table {
   .card__main__descr {
     max-width: 24rem;
     margin: auto;
+    line-height: 30px;
+    letter-spacing: -0.22px;
   }
 }
 
@@ -429,12 +428,12 @@ table {
 
 @media screen and (min-width: 680px) {
   .menu__section {
-    top: 315px;
+    top: 282px;
     margin-bottom: -202px;
     padding: 62px 97px;
   }
   .menu__section::before {
-    top: 12px;
+    top: 25px;
   }
 }
 
@@ -480,8 +479,11 @@ table {
 
 @media screen and (min-width: 680px) {
   .menu__headings__title {
-    margin: 27px auto 66px;
-    max-width: 20rem;
+    margin: 10px auto 24px;
+    max-width: 28rem;
+    line-height: 56px;
+    font-size: 2.5rem;
+    letter-spacing: -0.5px;
   }
 }
 
@@ -490,9 +492,6 @@ table {
     text-align: left;
     margin-left: 0;
     margin-top: 120px;
-    font-size: 2.5rem;
-    line-height: 56px;
-    letter-spacing: -0.5px;
     max-width: 30rem;
   }
 }
@@ -519,6 +518,8 @@ table {
   .menu__headings__descr {
     max-width: 24rem;
     margin: auto;
+    line-height: 30px;
+    letter-spacing: -0.22px;
   }
 }
 
@@ -749,8 +750,11 @@ body {
 
 @media screen and (min-width: 680px) {
   .cta__descr__hero__cat__title {
-    margin: 27px auto 66px;
-    max-width: 20rem;
+    margin: 10px auto 24px;
+    max-width: 28rem;
+    line-height: 56px;
+    font-size: 2.5rem;
+    letter-spacing: -0.5px;
   }
 }
 
@@ -759,9 +763,6 @@ body {
     text-align: left;
     margin-left: 0;
     margin-top: 120px;
-    font-size: 2.5rem;
-    line-height: 56px;
-    letter-spacing: -0.5px;
     max-width: 30rem;
   }
 }
@@ -783,6 +784,8 @@ body {
   .cta__descr__hero__cat__summary {
     max-width: 24rem;
     margin: auto;
+    line-height: 30px;
+    letter-spacing: -0.22px;
   }
 }
 
