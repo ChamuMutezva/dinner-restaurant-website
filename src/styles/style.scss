@@ -16,7 +16,7 @@ body {
 // cta = call__to__action
 .cta {
     position: relative;
-    top: 200px;
+    top: 236px;
 
     .cta__descr {
         margin-top: 35px;
@@ -96,6 +96,12 @@ body {
 
     @include mQ(1080px) {
         text-align: left;
+
+        &:focus {
+            &::before {
+                left: 4%;
+            }
+        }
     }
 }
 
@@ -125,6 +131,7 @@ body {
 
 .cta__descr__hero {
     position: relative;
+    padding-bottom : 50px;
 }
 
 .cta__events__img {

@@ -13,6 +13,7 @@
     @include mQ(680px) {
         top: 315px;
         margin-bottom: -202px;
+        padding: 62px 97px;
 
         &::before {
             top: 12px;
@@ -23,11 +24,13 @@
         display: flex;
         top: 58px;
         padding: 145px 125px;
+        flex-direction: column;
     }
 
-    @include mQ(1440px) {
+    @include mQ(1280px) {
         top: -140px;
-        padding: 185px 165px;
+        padding: 185px 165px 115px;
+        flex-direction: row;
     }
 
 }
@@ -48,6 +51,16 @@
 
 .menu__headings__descr {
     @include cardDescriptions;
+
+    @include mQ(1080px) {
+        text-align: center;
+        margin: auto;
+    }
+
+    @include mQ(1440px) {
+        text-align: left;
+        margin-left: 0;
+    }
 }
 
 .menu__cards {
@@ -72,13 +85,25 @@
 
     img {
         max-width: 100%;
+        display: block;
     }
+
+    @include mQ(1080px) {
+        img {
+            max-width: 60%;
+        }
+    }
+}
+
+.bottomBorder {
+    border-bottom: 1px solid $lt-grey-bg;
+    padding-bottom: 10px;
 }
 
 // 
 .hideBefore {
     top: -45px;
-    margin-bottom: -8px;
+    margin-bottom: -20px;
 
     &::before {
         content: "";
@@ -88,48 +113,30 @@
 
 .cardMenu {
     position: relative;
-/*
-    &::after {
-        content: "";
-        width: 100%;
-        position: absolute;
-        height: 1px;
-        background-color: $lt-grey-bg;
-        left: 0;
-        bottom: 31px;
-    }
-*/
+
     @include mQ(680px) {
         display: flex;
-        justify-content: center;
+        justify-content: space-between;
         align-items: center;
-        padding: 0 97px;
-        /*
-        &::after {
-            width: 80%;
-            left: 13%;
-            bottom: 10px;
-        }
-        */
-    }
-
-    @include mQ(1080px) {
-        margin-bottom: 60px;
-
-        /*z-index: 5;
-        &::after {
-            width: 80%;
-            left: auto;
-            bottom: -30px;
-        }
-        */
+        // padding: 0 97px;
 
         &::before {
             content: url('../assets/images/patterns/pattern-divide.svg');
             position: absolute;
-            top: 40px;
-            left: 250px;
-            z-index: -1;
+            top: 45px;
+            left: 90px;
+            z-index: 0;
+        }
+
+    }
+
+    @include mQ(1280px) {
+        padding: 0;
+
+        &::before {
+           // top: 90px;
+           // left: 180px;
+            z-index: 0;
         }
 
     }

@@ -2,12 +2,13 @@
     @include mQ(1080px) {
         display: flex;
         justify-content: space-between;
-        align-items: center;  
-        padding: 0px 110px;      
+        align-items: center;
+        padding: 0px 110px;
     }
-    @include mQ(1440px){
+
+    @include mQ(1440px) {
         padding: 0 165px;
-       // align-items: flex-end; 
+        // align-items: flex-end; 
         margin-top: -12px;
         z-index: 20;
     }
@@ -45,14 +46,16 @@
 
     @include mQ(1080px) {
         top: -58px;
+
         &::before {
             top: 310px;
             width: 62%;
         }
+
         &::after {
-            bottom: 45px;  
-            width: 62%;   
-            right: 0;     
+            bottom: 45px;
+            width: 62%;
+            right: 0;
         }
     }
 
@@ -61,7 +64,7 @@
 .card__main {
     position: relative;
     margin-top: 24px;
-    padding: 0 25px;
+    padding: 0 9px;
     margin-bottom: 76px;
 
     &::before {
@@ -72,6 +75,7 @@
 
     @include mQ(680px) {
         margin-bottom: 120px;
+        flex: 2 1 60%;
 
         &::before {
             top: 24px;
@@ -80,28 +84,30 @@
 
     @include mQ(1080px) {
         padding: 0 61px;
+
         &::before {
             left: 61px;
-            
-            position: absolute;           
+
+            position: absolute;
         }
     }
 
     @include mQ(1080px) {
-       
+
         &::before {
-            top: 132px;          
+            top: 132px;
         }
     }
 }
 
 
 .card__main__title {
-   @include cardHeadings;  
+    @include cardHeadings;
 }
 
 .card__main__descr {
-   @include cardDescriptions;
+    @include cardDescriptions;
+    max-width: 100%;
 }
 
 .card__img {
@@ -110,6 +116,11 @@
     img {
         max-width: 100%;
     }
+
+    @include mQ(680px) {
+        z-index: 1;
+    }
+
     @include mQ(1080px) {
         box-shadow: none;
     }
@@ -129,9 +140,11 @@
             // background-color: aqua;
         }
     }
+
     @include mQ(1080px) {
         flex-direction: row-reverse;
     }
+
     @include mQ(1440px) {
         margin-top: 118px;
     }
