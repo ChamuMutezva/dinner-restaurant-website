@@ -23,7 +23,7 @@ body {
     }
 
     @include mQ(680px) {
-        top: 518px;
+        top: 584px;
         padding-top: 72px;
 
         &::before {
@@ -31,7 +31,7 @@ body {
             width: 378px;
             height: 320px;
             background-color: #ededed;
-            top: 0;
+            top: -64px;
             left: 0;
             content: "";
             border-radius: 0px 50px 0 0;

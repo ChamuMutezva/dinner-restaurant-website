@@ -11,7 +11,7 @@
     }
 
     @include mQ(680px) {
-        top: 282px;
+        top: 318px;
         margin-bottom: -202px;
         padding: 62px 97px;
 
@@ -45,7 +45,7 @@
     @include cardHeadings;
 
     @include mQ(680px) {
-        margin: 15px auto 62px;
+        margin: 15px auto 25px;
     }
 }
 
@@ -67,7 +67,7 @@
     margin-top: 60px;
 
     @include mQ(680px) {
-        margin-top: 35px;
+        margin-top: 24px;
     }
 }
 
@@ -76,8 +76,15 @@
 
     @include mQ(680px) {
         margin: 2px auto 10px;
+        line-height: 28px;
     }
 
+}
+
+.menuDescr {
+    @include mQ(680px) {
+        line-height: 28px;
+    }
 }
 
 .cardShadow {
@@ -97,7 +104,7 @@
 
 .bottomBorder {
     border-bottom: 1px solid $lt-grey-bg;
-    padding-bottom: 10px;
+    padding-bottom: 0px;
 }
 
 // 
@@ -134,8 +141,8 @@
         padding: 0;
 
         &::before {
-           // top: 90px;
-           // left: 180px;
+            // top: 90px;
+            // left: 180px;
             z-index: 0;
         }
 

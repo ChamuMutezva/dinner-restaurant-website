@@ -428,7 +428,7 @@ table {
 
 @media screen and (min-width: 680px) {
   .menu__section {
-    top: 282px;
+    top: 318px;
     margin-bottom: -202px;
     padding: 62px 97px;
   }
@@ -504,7 +504,7 @@ table {
 
 @media screen and (min-width: 680px) {
   .menu__headings__title {
-    margin: 15px auto 62px;
+    margin: 15px auto 25px;
   }
 }
 
@@ -550,7 +550,7 @@ table {
 
 @media screen and (min-width: 680px) {
   .menu__cards {
-    margin-top: 35px;
+    margin-top: 24px;
   }
 }
 
@@ -561,6 +561,13 @@ table {
 @media screen and (min-width: 680px) {
   .menuTitle {
     margin: 2px auto 10px;
+    line-height: 28px;
+  }
+}
+
+@media screen and (min-width: 680px) {
+  .menuDescr {
+    line-height: 28px;
   }
 }
 
@@ -582,7 +589,7 @@ table {
 
 .bottomBorder {
   border-bottom: 1px solid #979797;
-  padding-bottom: 10px;
+  padding-bottom: 0px;
 }
 
 .hideBefore {
@@ -644,7 +651,7 @@ body {
 
 @media screen and (min-width: 680px) {
   .cta {
-    top: 518px;
+    top: 584px;
     padding-top: 72px;
   }
   .cta::before {
@@ -652,7 +659,7 @@ body {
     width: 378px;
     height: 320px;
     background-color: #ededed;
-    top: 0;
+    top: -64px;
     left: 0;
     content: "";
     border-radius: 0px 50px 0 0;
