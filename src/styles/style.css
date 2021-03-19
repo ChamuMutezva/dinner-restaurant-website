@@ -137,6 +137,7 @@ table {
   background-color: inherit;
   color: #ffffff;
   border: 1px solid #ffffff;
+  text-transform: uppercase;
 }
 
 @media screen and (min-width: 1080px) {
@@ -590,7 +591,7 @@ table {
 
 .bottomBorder {
   border-bottom: 1px solid #979797;
-  padding-bottom: 0px;
+  margin-bottom: 5px;
 }
 
 .hideBefore {
@@ -850,18 +851,26 @@ table {
           box-shadow: 0px 20px 20px 0px grey;
 }
 
-body {
-  font-family: 'Spartan', sans-serif;
-  font-size: 16px;
-}
-
 .booking {
   background-image: url("../assets/images/homepage/ready-bg-desktop@2x.jpg");
   background-repeat: no-repeat;
   background-size: cover;
   position: relative;
-  top: 325px;
-  padding-top: 106px;
+  top: 315px;
+  padding-top: 80px;
+  padding-bottom: 90px;
+}
+
+@media screen and (min-width: 680px) {
+  .booking {
+    background-image: url("../assets/images/homepage/ready-bg-tablet@2x.jpg");
+  }
+}
+
+@media screen and (min-width: 1080px) {
+  .booking {
+    background-image: url("../assets/images/homepage/ready-bg-desktop@2x.jpg");
+  }
 }
 
 .booking__title {
@@ -872,6 +881,7 @@ body {
   line-height: 40px;
   margin-bottom: 20px;
   color: #ffffff;
+  padding-top: 0px;
 }
 
 @media screen and (min-width: 680px) {
@@ -897,5 +907,60 @@ body {
   .booking__title {
     margin-top: 70px;
   }
+}
+
+@media screen and (min-width: 1080px) {
+  .booking__title {
+    max-width: 100%;
+    text-align: center;
+    margin: 120px auto 20px;
+  }
+}
+
+.centerBtn {
+  margin: auto;
+}
+
+body {
+  font-family: 'Spartan', sans-serif;
+  font-size: 16px;
+}
+
+.footer {
+  position: relative;
+  top: 315px;
+  background-color: #111111;
+  color: #ffffff;
+  padding-top: 80px;
+  padding-bottom: 60px;
+}
+
+.footer .address__list,
+.footer .open__times {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+}
+
+.footer .contact {
+  margin-top: 34px;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  gap: 30px;
+}
+
+.footer .contact span {
+  font-size: 0.875rem;
+  line-height: 28px;
+  letter-spacing: 2px;
 }
 /*# sourceMappingURL=style.css.map */

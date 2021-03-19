@@ -67,6 +67,7 @@
     background-color: inherit;
     color: $white-tx;
     border: 1px solid $white-tx;
+    text-transform: uppercase;
     @include mQ(1080px) {
         display: block;
         margin: 0;

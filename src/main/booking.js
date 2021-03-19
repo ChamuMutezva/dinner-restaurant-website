@@ -4,7 +4,7 @@ const Booking = () => {
     return (
         <section className="booking">
             <h3 className="booking__title">Ready to make a reservation?</h3>
-            <Button />
+            <Button title="Book a table" centerBtn={true}/>
         </section>
     )
 }
