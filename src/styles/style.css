@@ -459,6 +459,7 @@ table {
     -webkit-box-direction: normal;
         -ms-flex-direction: row;
             flex-direction: row;
+    gap: 20px;
   }
 }
 
@@ -633,11 +634,6 @@ table {
   .cardMenu::before {
     z-index: 0;
   }
-}
-
-body {
-  font-family: 'Spartan', sans-serif;
-  font-size: 16px;
 }
 
 .cta {
@@ -852,5 +848,54 @@ body {
 .cta__img img {
   -webkit-box-shadow: 0px 20px 20px 0px grey;
           box-shadow: 0px 20px 20px 0px grey;
+}
+
+body {
+  font-family: 'Spartan', sans-serif;
+  font-size: 16px;
+}
+
+.booking {
+  background-image: url("../assets/images/homepage/ready-bg-desktop@2x.jpg");
+  background-repeat: no-repeat;
+  background-size: cover;
+  position: relative;
+  top: 325px;
+  padding-top: 106px;
+}
+
+.booking__title {
+  padding-top: 42px;
+  font-size: 2rem;
+  font-weight: 800;
+  letter-spacing: -0.4px;
+  line-height: 40px;
+  margin-bottom: 20px;
+  color: #ffffff;
+}
+
+@media screen and (min-width: 680px) {
+  .booking__title {
+    margin: 10px auto 24px;
+    max-width: 28rem;
+    line-height: 56px;
+    font-size: 2.5rem;
+    letter-spacing: -0.5px;
+  }
+}
+
+@media screen and (min-width: 1080px) {
+  .booking__title {
+    text-align: left;
+    margin-left: 0;
+    margin-top: 120px;
+    max-width: 30rem;
+  }
+}
+
+@media screen and (min-width: 1440px) {
+  .booking__title {
+    margin-top: 70px;
+  }
 }
 /*# sourceMappingURL=style.css.map */

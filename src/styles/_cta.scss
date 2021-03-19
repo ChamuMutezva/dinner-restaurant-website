@@ -1,0 +1,147 @@
+// cta = call__to__action
+.cta {
+    position: relative;
+    top: 236px;
+
+    .cta__descr {
+        margin-top: 35px;
+    }
+
+    @include mQ(680px) {
+        top: 584px;
+        padding-top: 72px;
+
+        &::before {
+            position: absolute;
+            width: 378px;
+            height: 320px;
+            background-color: #ededed;
+            top: -64px;
+            left: 0;
+            content: "";
+            border-radius: 0px 50px 0 0;
+        }
+
+        &::after {
+            position: absolute;
+            top: 35px;
+            left: 39px;
+            content: url("../assets/images/patterns/pattern-lines.svg");
+
+        }
+
+    }
+
+    @include mQ(1080px) {
+        top: 300px;
+        display: flex;
+        padding: 0 165px;
+        justify-content: space-between;
+    }
+
+}
+
+.cta__descr {
+    margin-top: 36px;
+
+    @include mQ(1080px) {
+        display: flex;
+        flex-direction: column-reverse;
+    }
+}
+
+.ctaBtnSecondary {
+    position: relative;
+    color: #979797;
+    font-size: calculateRem(14);
+    line-height: 28px;
+    border: none;
+    outline: none;
+    padding: 10px;
+    font-weight: 800;
+
+    &:hover {
+        color: $dark-tx;
+        cursor: pointer;
+    }
+
+    &:focus {
+        color: #242b37;
+
+        &::before {
+            position: absolute;
+            content: "";
+            width: 100px;
+            height: 3px;
+            background-color: #242b37;
+            top: 40px;
+            left: 30%;
+        }
+    }
+
+    @include mQ(1080px) {
+        text-align: left;
+
+        &:focus {
+            &::before {
+                left: 4%;
+            }
+        }
+    }
+}
+
+.cta__descr__hero__cat {
+    padding: 0 12px;
+}
+
+.cta__descr__hero__cat__title {
+    @include cardHeadings;
+    padding-top: 12px;
+    color: #242b37;
+}
+
+.cta__descr__hero__cat__summary {
+    @include cardDescriptions;
+    color: #242b37;
+}
+
+.ctaBtnPrimary {
+    background-color: black;
+    margin-top: 30px;
+
+    @include mQ(1080px) {
+        margin-left: 12px;
+    }
+}
+
+.cta__descr__hero {
+    position: relative;
+    padding-bottom : 50px;
+}
+
+.cta__events__img {
+    position: relative;
+}
+
+.cta__descr__list__items {
+    @include mQ(680px) {
+        display: flex;
+        justify-content: center;
+    }
+
+    @include mQ(1080px) {
+        flex-direction: column;
+    }
+}
+
+.ctaHide {
+    visibility: hidden;
+    position: absolute;
+    top: 0;
+    // left: 8000px;
+    // transition: ease-out 1s;
+}
+
+.cta__img img {
+    box-shadow: 0px 20px 20px 0px grey;
+}
