@@ -1030,6 +1030,10 @@ body {
   /* overflow-x: hidden; */
 }
 
+.reservation {
+  position: relative;
+}
+
 .secondaryHeader {
   background-image: url("../assets/images/booking/hero-bg-mobile.jpg");
   min-height: 600px;
@@ -1057,6 +1061,11 @@ body {
       -ms-flex-direction: column;
           flex-direction: column;
   padding: 24px;
+  position: relative;
+  top: -136px;
+  background: white;
+  width: 74%;
+  margin: auto;
 }
 
 .form .input__label {
@@ -1087,7 +1096,7 @@ fieldset {
   -webkit-box-direction: normal;
       -ms-flex-direction: row;
           flex-direction: row;
-  /* border: none; */
+  border-bottom: 1px solid black;
 }
 
 select {
@@ -1097,11 +1106,39 @@ select {
   -moz-appearance: none;
 }
 
+legend {
+  margin-bottom: 14px;
+}
+
+.hours, .minutes, .mode {
+  border-bottom: 1px solid black;
+  padding: 15px 0;
+  text-transform: uppercase;
+}
+
 .date__selection {
+  margin-bottom: 30px;
+}
+
+.date__selection__list,
+.time__selection__list {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
   -ms-flex-pack: distribute;
       justify-content: space-around;
+}
+
+.date__selection__title, .time__selection__title {
+  text-align: left;
+  margin-left: 20px;
+  font-size: 1.125rem;
+  line-height: 28px;
+  letter-spacing: -0.22px;
+}
+
+.sr__only {
+  text-align: left;
+  margin-left: 20px;
 }
 /*# sourceMappingURL=style.css.map */
