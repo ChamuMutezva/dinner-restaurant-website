@@ -20,16 +20,15 @@
         letter-spacing: -0.5px;
     }
 
-    @include mQ(1080px) {
-        text-align: left;
-        margin-left: 0;
-        margin-top: 120px;
+    @include mQ(1080px) {        
         max-width: 30rem;
     }
 
-    @include mQ(1440px) {
+    @include mQ(1280px) {
         margin-top: 70px;
-        //width: 85%;
+        text-align: left;
+        margin-left: 0;
+        margin-top: 0px;
     }
 }
 
@@ -45,7 +44,7 @@
         letter-spacing: -0.22px;
     }
 
-    @include mQ(1080px) {
+    @include mQ(1280px) {
         text-align: left;
         margin-left: 0;
     }

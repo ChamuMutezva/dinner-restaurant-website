@@ -8,6 +8,7 @@
 @import 'menu';
 @import 'cta';
 @import 'booking';
+@import 'footer';
 
 // nb : js changed classes are camelCased;
 body {
@@ -15,27 +16,9 @@ body {
     font-size: 16px;
 }
 
-.footer {
-    position: relative;
-    top: 315px;
-    background-color: $dark-bg;
-    color: $white-tx;
-    padding-top: 80px;
-    padding-bottom: 60px;
-    .address__list,
-    .open__times {
-        display: flex;
-        flex-direction: column;
-    }
-    .contact {
-        margin-top: 34px;
-        display: flex;
-        flex-direction: column;
-        gap: 30px;
-         span {
-             font-size: calculateRem(14);
-             line-height: 28px;
-             letter-spacing: 2px;
-         }
-    }
+.App {
+    text-align: center;
+    /* overflow-x: hidden; */
 }
+
+

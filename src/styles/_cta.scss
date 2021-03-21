@@ -33,10 +33,18 @@
     }
 
     @include mQ(1080px) {
-        top: 300px;
+        top: 324px;
+        padding: 0 130px;
+    }
+
+    @include mQ(1280px) {
+        top: 126px;
         display: flex;
-        padding: 0 165px;
         justify-content: space-between;
+    }
+
+    @include mQ(1440px) {
+        padding: 0 165px;
     }
 
 }
@@ -109,14 +117,14 @@
     background-color: black;
     margin-top: 30px;
 
-    @include mQ(1080px) {
+    @include mQ(1280px) {
         margin-left: 12px;
     }
 }
 
 .cta__descr__hero {
     position: relative;
-    padding-bottom : 50px;
+    padding-bottom: 50px;
 }
 
 .cta__events__img {
@@ -129,7 +137,7 @@
         justify-content: center;
     }
 
-    @include mQ(1080px) {
+    @include mQ(1280px) {
         flex-direction: column;
     }
 }

@@ -140,7 +140,7 @@ table {
   text-transform: uppercase;
 }
 
-@media screen and (min-width: 1080px) {
+@media screen and (min-width: 1280px) {
   .call__to__action--btn {
     display: block;
     margin: 0;
@@ -298,13 +298,8 @@ table {
   }
   .card__main::before {
     left: 61px;
+    top: 0px;
     position: absolute;
-  }
-}
-
-@media screen and (min-width: 1080px) {
-  .card__main::before {
-    top: 132px;
   }
 }
 
@@ -329,16 +324,16 @@ table {
 
 @media screen and (min-width: 1080px) {
   .card__main__title {
-    text-align: left;
-    margin-left: 0;
-    margin-top: 120px;
     max-width: 30rem;
   }
 }
 
-@media screen and (min-width: 1440px) {
+@media screen and (min-width: 1280px) {
   .card__main__title {
     margin-top: 70px;
+    text-align: left;
+    margin-left: 0;
+    margin-top: 0px;
   }
 }
 
@@ -358,7 +353,7 @@ table {
   }
 }
 
-@media screen and (min-width: 1080px) {
+@media screen and (min-width: 1280px) {
   .card__main__descr {
     text-align: left;
     margin-left: 0;
@@ -372,6 +367,7 @@ table {
 
 .card__img img {
   max-width: 100%;
+  position: relative;
 }
 
 @media screen and (min-width: 680px) {
@@ -423,8 +419,10 @@ table {
 }
 
 .menu__section::before {
-  position: relative;
+  position: absolute;
   content: url("../assets/images/patterns/pattern-divide.svg");
+  left: 0;
+  right: 0;
 }
 
 @media screen and (min-width: 680px) {
@@ -462,11 +460,10 @@ table {
             flex-direction: row;
     gap: 20px;
   }
-}
-
-@media screen and (min-width: 1440px) {
-  .menu__headings {
-    margin-left: -75px;
+  .menu__section::before {
+    left: 165px;
+    right: auto;
+    top: 200px;
   }
 }
 
@@ -491,16 +488,16 @@ table {
 
 @media screen and (min-width: 1080px) {
   .menu__headings__title {
-    text-align: left;
-    margin-left: 0;
-    margin-top: 120px;
     max-width: 30rem;
   }
 }
 
-@media screen and (min-width: 1440px) {
+@media screen and (min-width: 1280px) {
   .menu__headings__title {
     margin-top: 70px;
+    text-align: left;
+    margin-left: 0;
+    margin-top: 0px;
   }
 }
 
@@ -525,7 +522,7 @@ table {
   }
 }
 
-@media screen and (min-width: 1080px) {
+@media screen and (min-width: 1280px) {
   .menu__headings__descr {
     text-align: left;
     margin-left: 0;
@@ -539,7 +536,7 @@ table {
   }
 }
 
-@media screen and (min-width: 1440px) {
+@media screen and (min-width: 1280px) {
   .menu__headings__descr {
     text-align: left;
     margin-left: 0;
@@ -581,6 +578,7 @@ table {
 .cardShadow img {
   max-width: 100%;
   display: block;
+  margin: auto;
 }
 
 @media screen and (min-width: 1080px) {
@@ -633,6 +631,8 @@ table {
     padding: 0;
   }
   .cardMenu::before {
+    top: 58px;
+    left: 137px;
     z-index: 0;
   }
 }
@@ -671,14 +671,26 @@ table {
 
 @media screen and (min-width: 1080px) {
   .cta {
-    top: 300px;
+    top: 324px;
+    padding: 0 130px;
+  }
+}
+
+@media screen and (min-width: 1280px) {
+  .cta {
+    top: 126px;
     display: -webkit-box;
     display: -ms-flexbox;
     display: flex;
-    padding: 0 165px;
     -webkit-box-pack: justify;
         -ms-flex-pack: justify;
             justify-content: space-between;
+  }
+}
+
+@media screen and (min-width: 1440px) {
+  .cta {
+    padding: 0 165px;
   }
 }
 
@@ -764,16 +776,16 @@ table {
 
 @media screen and (min-width: 1080px) {
   .cta__descr__hero__cat__title {
-    text-align: left;
-    margin-left: 0;
-    margin-top: 120px;
     max-width: 30rem;
   }
 }
 
-@media screen and (min-width: 1440px) {
+@media screen and (min-width: 1280px) {
   .cta__descr__hero__cat__title {
     margin-top: 70px;
+    text-align: left;
+    margin-left: 0;
+    margin-top: 0px;
   }
 }
 
@@ -793,7 +805,7 @@ table {
   }
 }
 
-@media screen and (min-width: 1080px) {
+@media screen and (min-width: 1280px) {
   .cta__descr__hero__cat__summary {
     text-align: left;
     margin-left: 0;
@@ -805,7 +817,7 @@ table {
   margin-top: 30px;
 }
 
-@media screen and (min-width: 1080px) {
+@media screen and (min-width: 1280px) {
   .ctaBtnPrimary {
     margin-left: 12px;
   }
@@ -831,7 +843,7 @@ table {
   }
 }
 
-@media screen and (min-width: 1080px) {
+@media screen and (min-width: 1280px) {
   .cta__descr__list__items {
     -webkit-box-orient: vertical;
     -webkit-box-direction: normal;
@@ -852,7 +864,7 @@ table {
 }
 
 .booking {
-  background-image: url("../assets/images/homepage/ready-bg-desktop@2x.jpg");
+  background-image: url("../assets/images/homepage/ready-bg-mobile@2x.jpg");
   background-repeat: no-repeat;
   background-size: cover;
   position: relative;
@@ -869,6 +881,7 @@ table {
 
 @media screen and (min-width: 1080px) {
   .booking {
+    top: 410px;
     background-image: url("../assets/images/homepage/ready-bg-desktop@2x.jpg");
   }
 }
@@ -896,16 +909,16 @@ table {
 
 @media screen and (min-width: 1080px) {
   .booking__title {
-    text-align: left;
-    margin-left: 0;
-    margin-top: 120px;
     max-width: 30rem;
   }
 }
 
-@media screen and (min-width: 1440px) {
+@media screen and (min-width: 1280px) {
   .booking__title {
     margin-top: 70px;
+    text-align: left;
+    margin-left: 0;
+    margin-top: 0px;
   }
 }
 
@@ -919,11 +932,6 @@ table {
 
 .centerBtn {
   margin: auto;
-}
-
-body {
-  font-family: 'Spartan', sans-serif;
-  font-size: 16px;
 }
 
 .footer {
@@ -946,7 +954,45 @@ body {
           flex-direction: column;
 }
 
-.footer .contact {
+@media screen and (min-width: 680PX) {
+  .footer .footer__container {
+    padding: 39px;
+    display: -ms-grid;
+    display: grid;
+    -ms-grid-columns: 1fr 2fr;
+        grid-template-columns: 1fr 2fr;
+    -webkit-box-align: first baseline;
+        -ms-flex-align: first baseline;
+            align-items: first baseline;
+  }
+  .footer .footer__container__img {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-pack: center;
+        -ms-flex-pack: center;
+            justify-content: center;
+    -webkit-box-align: baseline;
+        -ms-flex-align: baseline;
+            align-items: baseline;
+  }
+}
+
+@media screen and (min-width: 1080PX) {
+  .footer {
+    top: 410px;
+  }
+  .footer .contact {
+    -webkit-box-orient: horizontal;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: row;
+            flex-direction: row;
+    -ms-flex-pack: distribute;
+        justify-content: space-around;
+  }
+}
+
+.contact {
   margin-top: 34px;
   display: -webkit-box;
   display: -ms-flexbox;
@@ -958,9 +1004,19 @@ body {
   gap: 30px;
 }
 
-.footer .contact span {
+.contact span {
   font-size: 0.875rem;
   line-height: 28px;
   letter-spacing: 2px;
+}
+
+body {
+  font-family: 'Spartan', sans-serif;
+  font-size: 16px;
+}
+
+.App {
+  text-align: center;
+  /* overflow-x: hidden; */
 }
 /*# sourceMappingURL=style.css.map */

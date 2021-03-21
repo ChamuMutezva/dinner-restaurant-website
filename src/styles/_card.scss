@@ -75,7 +75,7 @@
 
     @include mQ(680px) {
         margin-bottom: 114px;
-       // flex: 2 1 60%;
+        // flex: 2 1 60%;
 
         &::before {
             top: 18px;
@@ -87,15 +87,8 @@
 
         &::before {
             left: 61px;
-
+            top: 0px;
             position: absolute;
-        }
-    }
-
-    @include mQ(1080px) {
-
-        &::before {
-            top: 132px;
         }
     }
 }
@@ -115,6 +108,7 @@
 
     img {
         max-width: 100%;
+        position: relative;
     }
 
     @include mQ(680px) {

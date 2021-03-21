@@ -6,8 +6,10 @@
     padding: 62px 24px;
 
     &::before {
-        position: relative;
-        content: url('../assets/images/patterns/pattern-divide.svg')
+        position: absolute;
+        content: url('../assets/images/patterns/pattern-divide.svg');
+        left: 0;
+        right: 0;
     }
 
     @include mQ(680px) {
@@ -32,13 +34,19 @@
         padding: 185px 165px 115px;
         flex-direction: row;
         gap: 20px;
+
+        &::before {
+            left: 165px;
+            right: auto;
+            top: 200px;
+        }
     }
 
 }
 
 .menu__headings {
     @include mQ(1440px) {
-        margin-left: -75px;
+        // margin-left: -75px;
     }
 }
 
@@ -58,7 +66,7 @@
         margin: auto;
     }
 
-    @include mQ(1440px) {
+    @include mQ(1280px) {
         text-align: left;
         margin-left: 0;
     }
@@ -94,6 +102,7 @@
     img {
         max-width: 100%;
         display: block;
+        margin: auto;
     }
 
     @include mQ(1080px) {
@@ -142,8 +151,8 @@
         padding: 0;
 
         &::before {
-            // top: 90px;
-            // left: 180px;
+            top: 58px;
+            left: 137px;
             z-index: 0;
         }
 

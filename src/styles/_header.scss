@@ -68,7 +68,7 @@
     color: $white-tx;
     border: 1px solid $white-tx;
     text-transform: uppercase;
-    @include mQ(1080px) {
+    @include mQ(1280px) {
         display: block;
         margin: 0;
     }
