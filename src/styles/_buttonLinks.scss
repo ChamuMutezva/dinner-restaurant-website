@@ -1,0 +1,26 @@
+.call__to__action--btn, .linkbtn {
+    font-size: calculateRem(14);
+    width: calculateRem(245);
+    line-height: 16px;
+    font-weight: 700;
+    letter-spacing: 2px;
+    padding: 21px;
+    background-color: inherit;
+    color: $white-tx;
+    border: 1px solid $white-tx;
+    text-transform: uppercase;
+    display: block;
+    margin: auto;
+
+    @include mQ(1280px) {
+        margin: 0;
+    }
+}
+
+.linkbtn {
+    text-decoration: none;
+    &:hover {
+        background-color: $white-bg;
+        color: $dark-tx;
+    }
+}

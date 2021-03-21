@@ -1,7 +1,10 @@
+import BookingHeader from './bookingHeader/BookingHeader'
+import FormComponent from './form/formComponent'
 const Reservation = () => {
     return (
         <div className="reservation">
-            <h1>reservation page</h1>
+           <BookingHeader />
+           <FormComponent />
         </div>
     )
 }

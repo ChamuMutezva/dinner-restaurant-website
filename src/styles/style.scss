@@ -3,7 +3,7 @@
 @import 'variables';
 @import 'mixins';
 @import 'header';
-//@import 'main';
+@import 'buttonLinks';
 @import 'card';
 @import 'menu';
 @import 'cta';
@@ -21,4 +21,57 @@ body {
     /* overflow-x: hidden; */
 }
 
+.secondaryHeader {
+    background-image: url("../assets/images/booking/hero-bg-mobile.jpg");
+    min-height: 600px;
 
+    .hero__main {
+        background-color: transparent;
+        top: 45px;
+    }
+
+    .hero__main__title {
+        margin-top: 25px;
+    }
+
+    .hero__main__descr {
+        margin: 17px auto 26px;
+    }
+}
+
+.form {
+    display: flex;
+    flex-direction: column;
+    padding: 24px;
+    .input__label {
+        display: flex;
+        flex-direction: column;
+        margin-bottom: 15px;
+    }
+
+    .form__inputs {
+        width: 80%;
+        max-width: 275px;
+        margin: 5px auto;
+        padding: 10px;
+        border: none;
+        border-bottom: 2px solid black;
+    }
+}
+
+fieldset {
+	display: flex;
+	flex-direction: row;
+	/* border: none; */
+}
+
+select {
+	border: none;
+    font-size: calculateRem(18);	
+    -webkit-appearance: none;
+    -moz-appearance: none;
+}
+.date__selection {
+	display: flex;
+	justify-content: space-around;
+}
