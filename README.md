@@ -1,4 +1,6 @@
-# Getting Started with Create React App
+# The Dine restaurant project. 
+The project was created using create-react-app
+## live preview link
 
  https://dinner-restaurant-website-react.netlify.app
 
