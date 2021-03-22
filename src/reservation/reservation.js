@@ -3,8 +3,10 @@ import FormComponent from './form/formComponent'
 const Reservation = () => {
     return (
         <div className="reservation">
-           <BookingHeader />
-           <FormComponent />
+            <BookingHeader />
+            <main className="main__component">
+                <FormComponent />
+            </main>
         </div>
     )
 }

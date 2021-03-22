@@ -1,7 +1,29 @@
 import { useForm } from 'react-hook-form'
+import { useState } from 'react'
+import Button from '../../shared-components/Button'
+
 const FormComponent = () => {
+    const [count, setCount] = useState(4)
     const { register, handleSubmit, watch, errors } = useForm();
     const onSubmit = data => console.log(data);
+    console.log(watch("firstname"));
+
+    const countup = () => {
+        if (count >= 10) {
+           return setCount(10)
+        } else {
+            setCount(count + 1)
+        }
+        
+    }
+    const countdown = () => {
+        if (count <= 1) {
+            return setCount(1)
+         } else {
+             setCount(count - 1)
+         }
+    }
+
     return (
         <form className="form" onSubmit={handleSubmit(onSubmit)}>
 
@@ -102,12 +124,18 @@ const FormComponent = () => {
                     </select>
                     <select className="mode">
                         <option value="am">am</option>
-                        <option value="pm">pm</option>                        
+                        <option value="pm">pm</option>
                     </select>
                 </div>
             </div>
 
-            <input type="submit" />
+            <div className="reserve__counter">
+                <button type="button" className="count__down" onClick={countdown}>-</button>
+                <p className="counter__holder"><span className="counter">{count}</span> people</p>
+                <button type="button" className="count__up" onClick={countup}>+</button>
+            </div>
+           {/*<input type="submit" />*/}
+           <Button title="Reservation" primary={true} />
         </form>
     )
 }

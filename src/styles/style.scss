@@ -21,6 +21,10 @@ body {
     /* overflow-x: hidden; */
 }
 
+.main__component {
+    position: relative;
+}
+
 .reservation {
     position: relative;
 }
@@ -41,6 +45,17 @@ body {
     .hero__main__descr {
         margin: 17px auto 26px;
     }
+
+    @include mQ(1080PX) {
+        .hero__main {
+            background-image: linear-gradient(to right, transparent 55%, transparent 50%);
+        }
+
+        .hero__main__descr {
+            margin: 24px 0 45px;
+        }
+
+    }
 }
 
 .form {
@@ -51,7 +66,9 @@ body {
     top: -136px;
     background: white;
     width: 74%;
-    margin: auto;
+    margin:10px auto -74px;
+    box-shadow: 1px 1px 14px 2px gray;
+    border-radius: 4px;
 
     .input__label {
         display: flex;
@@ -81,30 +98,59 @@ select {
     -webkit-appearance: none;
     -moz-appearance: none;
 }
+
 legend {
-	margin-bottom: 14px;
+    margin-bottom: 14px;
 }
-.hours, .minutes, .mode {
+
+.hours,
+.minutes,
+.mode {
     border-bottom: 1px solid black;
     padding: 15px 0;
     text-transform: uppercase;
 }
+
 .date__selection {
-	margin-bottom: 30px;
+    margin-bottom: 30px;
 }
+
 .date__selection__list,
 .time__selection__list {
     display: flex;
     justify-content: space-around;
 }
-.date__selection__title, .time__selection__title {
-	text-align: left;
-	margin-left: 20px;
-	font-size: calculateRem(18);
-	line-height: 28px;
-	letter-spacing: -0.22px;
+
+.date__selection__title,
+.time__selection__title {
+    text-align: left;
+    margin-left: 20px;
+    font-size: calculateRem(18);
+    line-height: 28px;
+    letter-spacing: -0.22px;
 }
+
 .sr__only {
-	text-align: left;
-	margin-left: 20px;
+    text-align: left;
+    margin-left: 20px;
+}
+
+.reserve__counter {
+    display: flex;
+    justify-content: space-between;
+    margin: 30px 0;
+    padding-bottom: 24px;
+}
+
+.count__down,
+.count__up,
+.counter__holder {
+    background: none;
+    outline: none;
+    border: none;
+    font-size: calculateRem(18);
+}
+
+.counter__holder {
+    font-weight: 800;
 }

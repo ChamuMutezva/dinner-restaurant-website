@@ -1,3 +1,5 @@
+//call-to-section > change images and accompanying text 
+// when appropriate buttons has been clicked
 const Button = (props) => {
     const primary = props.primary ? "ctaBtnPrimary" : ""
     const secondary = props.secondary ? "ctaBtnSecondary" : ""
@@ -9,14 +11,14 @@ const Button = (props) => {
         //console.log(evt.target)
         if (evt.target.classList.contains("ctaBtnSecondary")) {
             const selectClass = evt.target.classList[evt.target.classList.length - 1]
-           // console.log(selectClass)
+            // console.log(selectClass)
             const target__div = Array.from(document.querySelectorAll(".cta__msg"))
             const target__img__list = Array.from(document.querySelectorAll(".cta__events__img__list"))
-           // console.log(target__img__list)
+            // console.log(target__img__list)
 
             target__div.forEach(element => {
                 if (element.classList.contains(selectClass)) {
-                  //  console.log(element)
+                    //  console.log(element)
                     element.classList.remove("ctaHide")
                 } else {
                     element.classList.add("ctaHide")
@@ -25,7 +27,7 @@ const Button = (props) => {
 
             target__img__list.forEach(element => {
                 if (element.classList.contains(selectClass)) {
-                   // console.log(element)
+                    // console.log(element)
                     element.classList.remove("ctaHide")
                 } else {
                     element.classList.add("ctaHide")

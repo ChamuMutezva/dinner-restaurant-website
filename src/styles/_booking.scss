@@ -6,7 +6,7 @@
     top: 315px;
     padding-top: 80px;
     padding-bottom: 90px;
-
+    margin-bottom: 315px;
     @include mQ(680px) {
        // top: 677px;
         background-image: url('../assets/images/homepage/ready-bg-tablet@2x.jpg')

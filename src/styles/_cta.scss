@@ -114,8 +114,15 @@
 }
 
 .ctaBtnPrimary {
-    background-color: black;
+    background-color: $dark-bg;
     margin-top: 30px;
+
+    &:hover {
+        background-color: $white-bg;
+        color: $dark-tx;
+        border: 2px solid $dark-bg;
+        cursor: pointer;
+    }
 
     @include mQ(1280px) {
         margin-left: 12px;

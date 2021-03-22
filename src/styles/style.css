@@ -823,8 +823,15 @@ table {
 }
 
 .ctaBtnPrimary {
-  background-color: black;
+  background-color: #111111;
   margin-top: 30px;
+}
+
+.ctaBtnPrimary:hover {
+  background-color: #ffffff;
+  color: #111111;
+  border: 2px solid #111111;
+  cursor: pointer;
 }
 
 @media screen and (min-width: 1280px) {
@@ -881,6 +888,7 @@ table {
   top: 315px;
   padding-top: 80px;
   padding-bottom: 90px;
+  margin-bottom: 315px;
 }
 
 @media screen and (min-width: 680px) {
@@ -946,7 +954,6 @@ table {
 
 .footer {
   position: relative;
-  top: 315px;
   background-color: #111111;
   color: #ffffff;
   padding-top: 80px;
@@ -1030,6 +1037,10 @@ body {
   /* overflow-x: hidden; */
 }
 
+.main__component {
+  position: relative;
+}
+
 .reservation {
   position: relative;
 }
@@ -1052,6 +1063,16 @@ body {
   margin: 17px auto 26px;
 }
 
+@media screen and (min-width: 1080PX) {
+  .secondaryHeader .hero__main {
+    background-image: -webkit-gradient(linear, left top, right top, color-stop(55%, transparent), color-stop(50%, transparent));
+    background-image: linear-gradient(to right, transparent 55%, transparent 50%);
+  }
+  .secondaryHeader .hero__main__descr {
+    margin: 24px 0 45px;
+  }
+}
+
 .form {
   display: -webkit-box;
   display: -ms-flexbox;
@@ -1065,7 +1086,10 @@ body {
   top: -136px;
   background: white;
   width: 74%;
-  margin: auto;
+  margin: 10px auto -74px;
+  -webkit-box-shadow: 1px 1px 14px 2px gray;
+          box-shadow: 1px 1px 14px 2px gray;
+  border-radius: 4px;
 }
 
 .form .input__label {
@@ -1110,7 +1134,9 @@ legend {
   margin-bottom: 14px;
 }
 
-.hours, .minutes, .mode {
+.hours,
+.minutes,
+.mode {
   border-bottom: 1px solid black;
   padding: 15px 0;
   text-transform: uppercase;
@@ -1129,7 +1155,8 @@ legend {
       justify-content: space-around;
 }
 
-.date__selection__title, .time__selection__title {
+.date__selection__title,
+.time__selection__title {
   text-align: left;
   margin-left: 20px;
   font-size: 1.125rem;
@@ -1140,5 +1167,29 @@ legend {
 .sr__only {
   text-align: left;
   margin-left: 20px;
+}
+
+.reserve__counter {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  margin: 30px 0;
+  padding-bottom: 24px;
+}
+
+.count__down,
+.count__up,
+.counter__holder {
+  background: none;
+  outline: none;
+  border: none;
+  font-size: 1.125rem;
+}
+
+.counter__holder {
+  font-weight: 800;
 }
 /*# sourceMappingURL=style.css.map */
