@@ -30,13 +30,13 @@ const FormComponent = () => {
             <label className="input__label" htmlFor="firstname">
                 <span className="sr__only">Name</span>
                 <input className="form__inputs" type="name" name="firstname" id="firstname" ref={register({ required: true })} />
-                {errors.firstname && <span>This field is required</span>}
+                {errors.firstname && <span className="errorMsg">This field is required</span>}
             </label>
 
             <label className="input__label" htmlFor="email">
                 <span className="sr__only">Email</span>
                 <input className="form__inputs" type="email" name="email" id="email" ref={register({ required: true })} />
-                {errors.email && <span>This field is required</span>}
+                {errors.email && <span className="errorMsg">This field is required</span>}
             </label>
 
             <div className="date__selection">

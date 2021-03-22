@@ -46,6 +46,22 @@ body {
         margin: 17px auto 26px;
     }
 
+    @include mQ(680PX) {
+        .hero__main__logo {
+            margin-left: 17px;
+            display: block;
+        }
+
+        .hero__main__title {
+            margin-top: 60px;
+        }
+        
+        .hero__main__descr {
+            max-width: 35rem;
+            margin-bottom: 90px;
+        }
+    }
+
     @include mQ(1080PX) {
         .hero__main {
             background-image: linear-gradient(to right, transparent 55%, transparent 50%);
@@ -63,10 +79,10 @@ body {
     flex-direction: column;
     padding: 24px;
     position: relative;
-    top: -136px;
+    top: -240px;
     background: white;
     width: 74%;
-    margin:10px auto -74px;
+    margin: 10px auto -74px;
     box-shadow: 1px 1px 14px 2px gray;
     border-radius: 4px;
 
@@ -153,4 +169,8 @@ legend {
 
 .counter__holder {
     font-weight: 800;
+}
+
+.errorMsg {
+    color: red;
 }

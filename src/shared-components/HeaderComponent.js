@@ -5,6 +5,7 @@ import logo from '../assets/images/logo.svg'
 //import Button from './Button'
 const HeaderComponent = (props) => {
     const secondaryHeader = props.secondaryHeader ? "secondaryHeader" : ""
+    const btnTitle = props.secondaryHeader ? "Reserve a place" : "Book a table"
     return (
         <div className={`hero ${secondaryHeader}`}>
             <div className="hero__main">
@@ -16,7 +17,7 @@ const HeaderComponent = (props) => {
                 <div className="hero__main__btncontainer">
                     {/* <Button title="Book a table" Link to="/reservation" /> 
                     <Link to="/reservation">Book a table</Link> */}
-                    <Linkbtn btn_title="Book a table"/>
+                    <Linkbtn btn_title={btnTitle} />
                 </div>
             </div>
         </div>
