@@ -1053,6 +1053,13 @@ table {
     background-color: #979797;
     border-radius: 0px 0 120px 0;
   }
+  .main__component::after {
+    position: absolute;
+    content: url("../assets/images/patterns/pattern-lines.svg");
+    top: 256px;
+    z-index: 1;
+    right: 48%;
+  }
 }
 
 .reservation {
@@ -1120,6 +1127,7 @@ table {
           box-shadow: 1px 1px 14px 2px gray;
   border-radius: 4px;
   overflow-x: hidden;
+  z-index: 2;
 }
 
 .form .details {

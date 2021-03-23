@@ -9,10 +9,18 @@
             content: "";
             width: 69vw;
             height: 320px;
-            left: 0;           
+            left: 0;
             top: 175px;
             background-color: $lt-grey-bg;
             border-radius: 0px 0 120px 0;
+        }
+
+        &::after {
+            position: absolute;
+            content: url("../assets/images/patterns/pattern-lines.svg");
+            top: 256px;
+            z-index: 1;
+            right: 48%;
         }
     }
 }
@@ -79,6 +87,7 @@
     box-shadow: 1px 1px 14px 2px gray;
     border-radius: 4px;
     overflow-x: hidden;
+    z-index: 2;
 
     .details {
         position: relative;
