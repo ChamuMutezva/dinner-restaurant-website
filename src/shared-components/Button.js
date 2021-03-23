@@ -7,6 +7,7 @@ const Button = (props) => {
     const specialMatch = props.specialMatch ? "specialMatch" : ""
     const socialMatch = props.socialMatch ? "socialMatch" : ""
     const centerbtn = props.centerBtn ? "centerBtn" : ""
+    const longbtn = props.longBtn ? "longBtn" : ""
     const handleClick = (evt) => {
         //console.log(evt.target)
         if (evt.target.classList.contains("ctaBtnSecondary")) {
@@ -40,7 +41,7 @@ const Button = (props) => {
     }
     return (
         <button className={`call__to__action--btn ${primary} ${secondary}
-         ${familyMatch} ${specialMatch} ${socialMatch} ${centerbtn}`}
+         ${familyMatch} ${specialMatch} ${socialMatch} ${centerbtn} ${longbtn}`}
             onClick={handleClick}>{props.title}</button>
     )
 }

@@ -1,6 +1,6 @@
 .footer {
     position: relative;
-   // top: 315px;
+    // top: 315px;
     background-color: $dark-bg;
     color: $white-tx;
     padding-top: 80px;
@@ -13,11 +13,12 @@
     }
 
     @include mQ(680PX) {
+
         // top: 677px;
         .footer__container {
             padding: 39px;
             display: grid;
-            grid-template-columns: 1fr 2fr;
+            grid-template-columns: 1fr 2fr 1fr;
             align-items: first baseline;
         }
 
@@ -30,10 +31,15 @@
 
     @include mQ(1080PX) {
         top: 410px;
+
+        .footer__container {
+            grid-template-columns: 1fr 2fr;
+        }
+
         .contact {
             flex-direction: row;
             justify-content: space-around;
-            
+
         }
     }
 

@@ -756,7 +756,7 @@ table {
     text-align: left;
   }
   .ctaBtnSecondary:focus::before {
-    left: 4%;
+    left: 16%;
   }
 }
 
@@ -894,6 +894,8 @@ table {
 
 @media screen and (min-width: 680px) {
   .booking {
+    top: 580px;
+    margin-bottom: 580px;
     background-image: url("../assets/images/homepage/ready-bg-tablet@2x.jpg");
   }
 }
@@ -901,6 +903,7 @@ table {
 @media screen and (min-width: 1080px) {
   .booking {
     top: 410px;
+    margin-bottom: 0px;
     background-image: url("../assets/images/homepage/ready-bg-desktop@2x.jpg");
   }
 }
@@ -977,8 +980,8 @@ table {
     padding: 39px;
     display: -ms-grid;
     display: grid;
-    -ms-grid-columns: 1fr 2fr;
-        grid-template-columns: 1fr 2fr;
+    -ms-grid-columns: 1fr 2fr 1fr;
+        grid-template-columns: 1fr 2fr 1fr;
     -webkit-box-align: first baseline;
         -ms-flex-align: first baseline;
             align-items: first baseline;
@@ -999,6 +1002,10 @@ table {
 @media screen and (min-width: 1080PX) {
   .footer {
     top: 410px;
+  }
+  .footer .footer__container {
+    -ms-grid-columns: 1fr 2fr;
+        grid-template-columns: 1fr 2fr;
   }
   .footer .contact {
     -webkit-box-orient: horizontal;
@@ -1040,6 +1047,22 @@ body {
 
 .main__component {
   position: relative;
+}
+
+@media screen and (min-width: 1080px) {
+  .main__component {
+    margin-bottom: 91px;
+  }
+  .main__component::before {
+    position: absolute;
+    content: "";
+    width: 69vw;
+    height: 320px;
+    left: 0;
+    top: 175px;
+    background-color: #979797;
+    border-radius: 0px 0 120px 0;
+  }
 }
 
 .reservation {
@@ -1098,13 +1121,28 @@ body {
           flex-direction: column;
   padding: 24px;
   position: relative;
-  top: -240px;
+  top: -146px;
   background: white;
   width: 74%;
+  max-width: 545px;
   margin: 10px auto -74px;
   -webkit-box-shadow: 1px 1px 14px 2px gray;
           box-shadow: 1px 1px 14px 2px gray;
   border-radius: 4px;
+  overflow-x: hidden;
+}
+
+.form .details {
+  position: relative;
+  margin: 1rem auto;
+  width: 100%;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
 }
 
 .form .input__label {
@@ -1116,15 +1154,41 @@ body {
       -ms-flex-direction: column;
           flex-direction: column;
   margin-bottom: 15px;
+  font-size: 0.875rem;
+  position: absolute;
+  top: -18px;
+  left: 24px;
 }
 
 .form .form__inputs {
-  width: 80%;
-  max-width: 275px;
+  width: 85%;
   margin: 5px auto;
-  padding: 10px;
+  padding: 3px;
   border: none;
   border-bottom: 2px solid black;
+  font-size: 1.25rem;
+}
+
+.form .form__inputs:focus + label {
+  opacity: 0;
+  color: red;
+}
+
+@media screen and (min-width: 680px) {
+  .form {
+    top: -240px;
+    margin: 10px auto -108px;
+  }
+  .form .input__label {
+    top: -18px;
+    left: 42px;
+  }
+}
+
+@media screen and (min-width: 1080px) {
+  .form {
+    margin: -175px 165px -540px auto;
+  }
 }
 
 fieldset {
@@ -1136,6 +1200,7 @@ fieldset {
       -ms-flex-direction: row;
           flex-direction: row;
   border-bottom: 1px solid black;
+  position: relative;
 }
 
 select {
@@ -1143,6 +1208,7 @@ select {
   font-size: 1.125rem;
   -webkit-appearance: none;
   -moz-appearance: none;
+  color: #979797;
 }
 
 legend {
@@ -1155,10 +1221,28 @@ legend {
   border-bottom: 1px solid black;
   padding: 15px 0;
   text-transform: uppercase;
+  color: #979797;
 }
 
 .date__selection {
-  margin-bottom: 30px;
+  margin-bottom: 12px;
+}
+
+@media screen and (min-width: 680px) {
+  .date__selection {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    margin-top: 15px;
+  }
+}
+
+@media screen and (min-width: 680px) {
+  .time__selection {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+  }
 }
 
 .date__selection__list,
@@ -1168,6 +1252,9 @@ legend {
   display: flex;
   -ms-flex-pack: distribute;
       justify-content: space-around;
+  -webkit-box-flex: 2;
+      -ms-flex: 2 1 60%;
+          flex: 2 1 60%;
 }
 
 .date__selection__title,
@@ -1177,11 +1264,19 @@ legend {
   font-size: 1.125rem;
   line-height: 28px;
   letter-spacing: -0.22px;
+  margin-top: 15px;
 }
 
 .sr__only {
   text-align: left;
   margin-left: 20px;
+  margin-top: 7px;
+}
+
+@media screen and (min-width: 680px) {
+  .sr__only {
+    margin-left: 50px;
+  }
 }
 
 .reserve__counter {
@@ -1191,8 +1286,17 @@ legend {
   -webkit-box-pack: justify;
       -ms-flex-pack: justify;
           justify-content: space-between;
-  margin: 30px 0;
+  margin: 30px auto;
   padding-bottom: 24px;
+  border-bottom: 2px solid black;
+  width: 85%;
+}
+
+@media screen and (min-width: 680px) {
+  .reserve__counter {
+    -ms-flex-pack: distribute;
+        justify-content: space-around;
+  }
 }
 
 .count__down,
@@ -1204,11 +1308,48 @@ legend {
   font-size: 1.125rem;
 }
 
+.count__down,
+.count__up {
+  color: #9e7f66;
+  font-weight: 800;
+}
+
 .counter__holder {
   font-weight: 800;
 }
 
 .errorMsg {
   color: red;
+  margin-left: 15px;
+  text-align: left;
+}
+
+@media screen and (min-width: 680px) {
+  .errorMsg {
+    margin-left: 35px;
+  }
+}
+
+label:focus + span {
+  opacity: 0;
+}
+
+.sr__date__labels {
+  position: absolute;
+  left: 8000px;
+}
+
+.hours__mode {
+  position: relative;
+}
+
+.form__inputs:not(:empty) + label {
+  opacity: 0;
+}
+
+@media screen and (min-width: 1080px) {
+  .longBtn {
+    width: 90%;
+  }
 }
 /*# sourceMappingURL=style.css.map */

@@ -25,6 +25,7 @@ import socialDesktop2x from '../assets/images/homepage/social-events-desktop@2x.
 import Button from '../shared-components/Button'
 import Events from '../shared-components/Events'
 import EventsImgComponent from './eventsImgComponent'
+import LinkBtn from '../shared-components/LinkBtn'
 
 const Gatherings = () => {
     return (
@@ -88,9 +89,11 @@ const Gatherings = () => {
 
                     </div>
 
-                    <Button title="Book a table" primary={true} />
+                    <LinkBtn btn_title="Book a table" primary={true} />
 
-                    {/*<button className="cta__descr__hero--btn">Book a table</button> */}
+                   {/*  <Button title="Book a table" primary={true} />
+
+                   <button className="cta__descr__hero--btn">Book a table</button> */}
                 </div>
             </div>
 

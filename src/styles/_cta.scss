@@ -92,7 +92,7 @@
 
         &:focus {
             &::before {
-                left: 4%;
+                left: 16%;
             }
         }
     }
@@ -122,6 +122,9 @@
         color: $dark-tx;
         border: 2px solid $dark-bg;
         cursor: pointer;
+    }
+    @include mQ(680px) {
+       // width: 90%;
     }
 
     @include mQ(1280px) {

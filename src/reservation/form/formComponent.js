@@ -5,46 +5,57 @@ import Button from '../../shared-components/Button'
 const FormComponent = () => {
     const [count, setCount] = useState(4)
     const { register, handleSubmit, watch, errors } = useForm();
-    const onSubmit = data => console.log(data);
+    const onSubmit = data => {
+        console.log(data)
+        console.log(errors)
+    };
     console.log(watch("firstname"));
 
     const countup = () => {
         if (count >= 10) {
-           return setCount(10)
+            return setCount(10)
         } else {
             setCount(count + 1)
         }
-        
+
     }
     const countdown = () => {
         if (count <= 1) {
             return setCount(1)
-         } else {
-             setCount(count - 1)
-         }
+        } else {
+            setCount(count - 1)
+        }
     }
 
     return (
         <form className="form" onSubmit={handleSubmit(onSubmit)}>
+            <div className="details">
 
-            <label className="input__label" htmlFor="firstname">
-                <span className="sr__only">Name</span>
-                <input className="form__inputs" type="name" name="firstname" id="firstname" ref={register({ required: true })} />
-                {errors.firstname && <span className="errorMsg">This field is required</span>}
-            </label>
+                <input className="form__inputs" type="name" name="firstname" aria-required="true"
+                    id="firstname" ref={register({ required: true })} />
+                <label className="input__label name__label" htmlFor="firstname">  Name   </label>
+                {errors.firstname && <span className="errorMsg"> This field is required</span>}
 
-            <label className="input__label" htmlFor="email">
-                <span className="sr__only">Email</span>
-                <input className="form__inputs" type="email" name="email" id="email" ref={register({ required: true })} />
+            </div>
+
+            <div className="details">
+
+                <input className="form__inputs" type="email" name="email" aria-required="true"
+                    id="email" ref={register({ required: true })} />
+                <label className="input__label" htmlFor="email">Email</label>
                 {errors.email && <span className="errorMsg">This field is required</span>}
-            </label>
+
+            </div>
+
 
             <div className="date__selection">
                 <h3 className="date__selection__title">Pick a date</h3>
                 <div className="date__selection__list">
+
                     <fieldset>
-                        <legend>MM</legend>
-                        <select name="month__zone">
+                        <legend>mm</legend>
+                        <label className="sr__date__labels" htmlFor="month">Select a month</label>
+                        <select name="month__zone" id="month">
                             <option value="1">01</option>
                             <option value="2">02</option>
                             <option value="3">03</option>
@@ -60,9 +71,11 @@ const FormComponent = () => {
                         </select>
                     </fieldset>
 
+
                     <fieldset>
-                        <legend>DD</legend>
-                        <select name="day__zone">
+                        <legend>dd</legend>
+                        <label className="sr__date__labels" htmlFor="day">Select a date</label>
+                        <select name="day__zone" id="date">
                             <option value="01">01</option>
                             <option value="02">02</option>
                             <option value="03">03</option>
@@ -98,8 +111,9 @@ const FormComponent = () => {
                     </fieldset>
 
                     <fieldset>
-                        <legend>YYYY</legend>
-                        <select name="year__zone">
+                        <legend>yyyy</legend>
+                        <label className="sr__date__labels" htmlFor="year">Select a year</label>
+                        <select name="year__zone" id="year">
                             <option value="1">2021</option>
                             <option value="2">2022</option>
                             <option value="3">2023</option>
@@ -110,22 +124,33 @@ const FormComponent = () => {
             <div className="time__selection">
                 <h3 className="time__selection__title">Pick a time</h3>
                 <div className="time__selection__list">
-                    <select className="hours">
-                        <option value="03">03</option>
-                        <option value="06">06</option>
-                        <option value="09">09</option>
-                        <option value="12">12</option>
-                    </select>
-                    <select className="minutes">
-                        <option value="00">00</option>
-                        <option value="15">15</option>
-                        <option value="30">30</option>
-                        <option value="45">45</option>
-                    </select>
-                    <select className="mode">
-                        <option value="am">am</option>
-                        <option value="pm">pm</option>
-                    </select>
+                    <div className="hours__mode">
+                        <label className="sr__date__labels" htmlFor="hour">Select starting hour time</label>
+                        <select className="hours" id="hour">
+                            <option value="03">03</option>
+                            <option value="06">06</option>
+                            <option value="09">09</option>
+                            <option value="12">12</option>
+                        </select>
+                    </div>
+
+                    <div className="hours__mode">
+                        <label className="sr__date__labels" htmlFor="minutes">Select starting minutes</label>
+                        <select className="minutes" id="minutes">
+                            <option value="00">00</option>
+                            <option value="15">15</option>
+                            <option value="30">30</option>
+                            <option value="45">45</option>
+                        </select>
+                    </div>
+
+                    <div className="hours__mode">
+                        <label className="sr__date__labels" htmlFor="mode">Select either morning or afternoon</label>
+                        <select className="mode" id="mode">
+                            <option value="am">am</option>
+                            <option value="pm">pm</option>
+                        </select>
+                    </div>
                 </div>
             </div>
 
@@ -134,8 +159,8 @@ const FormComponent = () => {
                 <p className="counter__holder"><span className="counter">{count}</span> people</p>
                 <button type="button" className="count__up" onClick={countup}>+</button>
             </div>
-           {/*<input type="submit" />*/}
-           <Button title="Reservation" primary={true} />
+            {/*<input type="submit" />*/}
+            <Button title="Reservation" primary={true} longBtn={true} />
         </form>
     )
 }

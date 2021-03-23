@@ -1,10 +1,14 @@
 import logo from '../assets/images/logo.svg'
+//import { Link } from "react-router-dom"
 const Footer = () => {
     return (
         <div className="footer">
             <div className="footer__container">
                 <div className="footer__container__img">
                     <img className="hero__main__logo footer__logo" src={logo} alt="welcome to dine" />
+                    {/*<Link to="/">
+                        <img className="hero__main__logo footer__logo" src={logo} alt="welcome to dine" />
+                    </Link>*/}
                 </div>
                 <div className="contact">
                     <address className="address">

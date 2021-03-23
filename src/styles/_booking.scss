@@ -8,12 +8,14 @@
     padding-bottom: 90px;
     margin-bottom: 315px;
     @include mQ(680px) {
-       // top: 677px;
+       top: 580px;
+       margin-bottom: 580px;
         background-image: url('../assets/images/homepage/ready-bg-tablet@2x.jpg')
     }
 
     @include mQ(1080px) {
         top: 410px;
+        margin-bottom: 0px;
         background-image: url('../assets/images/homepage/ready-bg-desktop@2x.jpg')
     }
 }
