@@ -1,10 +1,9 @@
+//header section
 .hero {
     position: relative;
     background-image: url('../assets/images/homepage/hero-bg-mobile@2x.jpg');
     background-repeat: no-repeat;
-    background-size: 100% auto;
-    //height: 100vh;
-    // width: 100vw;
+    background-size: 100% auto;   
     background-position: top;
 
     @include mQ(780px) {

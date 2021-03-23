@@ -1035,16 +1035,6 @@ table {
   letter-spacing: 2px;
 }
 
-body {
-  font-family: 'Spartan', sans-serif;
-  font-size: 16px;
-}
-
-.App {
-  text-align: center;
-  /* overflow-x: hidden; */
-}
-
 .main__component {
   position: relative;
 }
@@ -1350,6 +1340,23 @@ label:focus + span {
 @media screen and (min-width: 1080px) {
   .longBtn {
     width: 90%;
+  }
+}
+
+body {
+  font-family: 'Spartan', sans-serif;
+  font-size: 16px;
+}
+
+.App {
+  text-align: center;
+}
+
+@media screen and (min-width: 1650px) {
+  .App {
+    width: 95%;
+    max-width: 1490px;
+    margin: 0 auto;
   }
 }
 /*# sourceMappingURL=style.css.map */

@@ -1,4 +1,4 @@
-// cta = call__to__action
+// cta = call__to__action section
 .cta {
     position: relative;
     top: 236px;
@@ -49,6 +49,7 @@
 
 }
 
+// *******************************************//
 .cta__descr {
     margin-top: 36px;
 
@@ -57,6 +58,9 @@
         flex-direction: column-reverse;
     }
 }
+
+//^^^^^^^^^^^^^^^^^^js changed code - ^^^^^^^^^^^^^^^^^^^^^^^^
+// styling buttons that change text and images^^^^^^^^^^^^^^^^^//
 
 .ctaBtnSecondary {
     position: relative;
@@ -113,6 +117,7 @@
     color: #242b37;
 }
 
+// dark button and white text
 .ctaBtnPrimary {
     background-color: $dark-bg;
     margin-top: 30px;
@@ -151,13 +156,13 @@
         flex-direction: column;
     }
 }
-
+// hide the images and text that are not in view
+// select images and text come into view when one
+// of the 3 buttons has been clicked
 .ctaHide {
     visibility: hidden;
     position: absolute;
-    top: 0;
-    // left: 8000px;
-    // transition: ease-out 1s;
+    top: 0;    
 }
 
 .cta__img img {

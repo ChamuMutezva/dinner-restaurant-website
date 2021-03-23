@@ -1,0 +1,267 @@
+.main__component {
+    position: relative;
+
+    @include mQ(1080px) {
+        margin-bottom: 91px;
+
+        &::before {
+            position: absolute;
+            content: "";
+            width: 69vw;
+            height: 320px;
+            left: 0;           
+            top: 175px;
+            background-color: $lt-grey-bg;
+            border-radius: 0px 0 120px 0;
+        }
+    }
+}
+
+.reservation {
+    position: relative;
+}
+
+.secondaryHeader {
+    background-image: url("../assets/images/booking/hero-bg-mobile.jpg");
+    min-height: 600px;
+
+    .hero__main {
+        background-color: transparent;
+        top: 45px;
+    }
+
+    .hero__main__title {
+        margin-top: 25px;
+    }
+
+    .hero__main__descr {
+        margin: 17px auto 26px;
+    }
+
+    @include mQ(680PX) {
+        .hero__main__logo {
+            margin-left: 17px;
+            display: block;
+        }
+
+        .hero__main__title {
+            margin-top: 60px;
+        }
+
+        .hero__main__descr {
+            max-width: 35rem;
+            margin-bottom: 90px;
+        }
+    }
+
+    @include mQ(1080PX) {
+        .hero__main {
+            background-image: linear-gradient(to right, transparent 55%, transparent 50%);
+        }
+
+        .hero__main__descr {
+            margin: 24px 0 45px;
+        }
+
+    }
+}
+
+.form {
+    display: flex;
+    flex-direction: column;
+    padding: 24px;
+    position: relative;
+    top: -146px;
+    background: white;
+    width: 74%;
+    max-width: 545px;
+    margin: 10px auto -74px;
+    box-shadow: 1px 1px 14px 2px gray;
+    border-radius: 4px;
+    overflow-x: hidden;
+
+    .details {
+        position: relative;
+        margin: 1rem auto;
+        width: 100%;
+        display: flex;
+        flex-direction: column;
+    }
+
+    .input__label {
+        display: flex;
+        flex-direction: column;
+        margin-bottom: 15px;
+        font-size: calculateRem(14);
+        position: absolute;
+        top: -18px;
+        left: 24px;
+    }
+
+    .form__inputs {
+        width: 85%;
+        margin: 5px auto;
+        padding: 3px;
+        border: none;
+        border-bottom: 2px solid black;
+        font-size: calculateRem(20);
+
+        &:focus+label {
+            opacity: 0;
+            color: red;
+        }
+    }
+
+    @include mQ(680px) {
+        top: -240px;
+        margin: 10px auto -108px;
+
+        .input__label {
+            top: -18px;
+            left: 42px;
+        }
+    }
+
+    @include mQ(1080px) {
+        margin: -175px 165px -540px auto;
+        // margin-right: 165px;
+        // margin-top: -175px;
+    }
+}
+
+fieldset {
+    display: flex;
+    flex-direction: row;
+    border-bottom: 1px solid black;
+    position: relative;
+
+}
+
+select {
+    border: none;
+    font-size: calculateRem(18);
+    -webkit-appearance: none;
+    -moz-appearance: none;
+    color: $lt-grey-tx;
+}
+
+legend {
+    margin-bottom: 14px;
+}
+
+.hours,
+.minutes,
+.mode {
+    border-bottom: 1px solid black;
+    padding: 15px 0;
+    text-transform: uppercase;
+    color: $lt-grey-tx;
+}
+
+.date__selection {
+    margin-bottom: 12px;
+
+    @include mQ(680px) {
+        display: flex;
+        margin-top: 15px;
+    }
+}
+
+.time__selection {
+    @include mQ(680px) {
+        display: flex;
+    }
+}
+
+.date__selection__list,
+.time__selection__list {
+    display: flex;
+    justify-content: space-around;
+    flex: 2 1 60%;
+}
+
+.date__selection__title,
+.time__selection__title {
+    text-align: left;
+    margin-left: 20px;
+    font-size: calculateRem(18);
+    line-height: 28px;
+    letter-spacing: -0.22px;
+    margin-top: 15px;
+}
+
+.sr__only {
+    text-align: left;
+    margin-left: 20px;
+    margin-top: 7px;
+
+    @include mQ(680px) {
+        margin-left: 50px;
+    }
+}
+
+.reserve__counter {
+    display: flex;
+    justify-content: space-between;
+    margin: 30px auto;
+    padding-bottom: 24px;
+    border-bottom: 2px solid black;
+    width: 85%;
+
+    @include mQ(680px) {
+        justify-content: space-around;
+    }
+}
+
+.count__down,
+.count__up,
+.counter__holder {
+    background: none;
+    outline: none;
+    border: none;
+    font-size: calculateRem(18);
+}
+
+.count__down,
+.count__up {
+    color: #9e7f66;
+    font-weight: 800;
+}
+
+.counter__holder {
+    font-weight: 800;
+}
+
+.errorMsg {
+    color: red;
+    margin-left: 15px;
+    text-align: left;
+
+    @include mQ(680px) {
+        margin-left: 35px;
+    }
+}
+
+label:focus+span {
+    opacity: 0;
+}
+
+
+.sr__date__labels {
+    position: absolute;
+    left: 8000px;
+}
+
+.hours__mode {
+    position: relative;
+}
+
+.form__inputs:not(:empty)+label {
+    opacity: 0;
+}
+
+.longBtn {
+    @include mQ(1080px) {
+        width: 90%;
+    }
+}

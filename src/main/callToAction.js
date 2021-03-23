@@ -27,7 +27,7 @@ import Events from '../shared-components/Events'
 import EventsImgComponent from './eventsImgComponent'
 import LinkBtn from '../shared-components/LinkBtn'
 
-const Gatherings = () => {
+const CallToAction = () => {
     return (
         <section className="cta">
             <div className="cta__events__img">
@@ -91,13 +91,10 @@ const Gatherings = () => {
 
                     <LinkBtn btn_title="Book a table" primary={true} />
 
-                   {/*  <Button title="Book a table" primary={true} />
-
-                   <button className="cta__descr__hero--btn">Book a table</button> */}
                 </div>
             </div>
 
         </section>
     )
 }
-export default Gatherings
+export default CallToAction
