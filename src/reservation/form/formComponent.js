@@ -27,6 +27,11 @@ const FormComponent = () => {
         }
     }
 
+    const validateMonth = () => {
+        const currentMonth = new Date().getMonth()
+        console.log(currentMonth)
+    }
+
     return (
         <form className="form" onSubmit={handleSubmit(onSubmit)}>
             <div className="details">
@@ -57,7 +62,8 @@ const FormComponent = () => {
                         <div className="month__selector">
 
                             <label className="sr__date__labels" htmlFor="month">Select a month</label>
-                            <select name="month__zone" id="month" ref={register({ required: true })}>
+                            <select name="month__zone" id="month"
+                             ref={register({ required: true, validate: validateMonth })}>
                                 <option value="MM">MM</option>
                                 <option value="1">01</option>
                                 <option value="2">02</option>
@@ -131,7 +137,7 @@ const FormComponent = () => {
                     <div className="time__selection__list">
                         <div className="hours__mode">
                             <label className="sr__date__labels" htmlFor="hour">Select starting hour time</label>
-                            <select className="hours" id="hour" ref={register({ required: true })}>
+                            <select className="hours" id="hour" name="getHours" ref={register({ required: true })}>
                                 <option value="03">03</option>
                                 <option value="06">06</option>
                                 <option value="09">09</option>
@@ -141,7 +147,7 @@ const FormComponent = () => {
 
                         <div className="hours__mode">
                             <label className="sr__date__labels" htmlFor="minutes">Select starting minutes</label>
-                            <select className="minutes" id="minutes" ref={register({ required: true })}>
+                            <select className="minutes" id="minutes" name="getMinutes" ref={register({ required: true })}>
                                 <option value="00">00</option>
                                 <option value="15">15</option>
                                 <option value="30">30</option>
@@ -149,9 +155,9 @@ const FormComponent = () => {
                             </select>
                         </div>
 
-                        <div className="hours__mode">
+                        <div className="state__mode">
                             <label className="sr__date__labels" htmlFor="mode">Select either morning or afternoon</label>
-                            <select className="mode" id="mode" ref={register({ required: true })}>
+                            <select className="mode" id="mode"name="stateMode" ref={register({ required: true })}>
                                 <option value="am">am</option>
                                 <option value="pm">pm</option>
                             </select>
