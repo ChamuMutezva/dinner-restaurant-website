@@ -1,14 +1,26 @@
-//import logo from './logo.svg';
+import { useEffect } from 'react'
+import { useLocation } from 'react-router-dom'
 import { BrowserRouter as Router, Switch, Route } from "react-router-dom"
 import Reservation from '../src/reservation/reservation'
 import Mainpage from '../src/main/Mainpage'
-//import './App.css'
 
-//import Header from './header/Header'
-//import Main from './main/main'
 import Footer from './footer/footer'
 
+//Function to scroll to top of page when navigating 
+//to a new page. at the end of a page focus of page will
+//be at the bottom of the page
+const ScrollToTop = () => {
+  const { pathname } = useLocation();
+
+  useEffect(() => {
+    window.scrollTo(0, 0);
+  }, [pathname]);
+
+  return null;
+}
+
 function App() {
+  <ScrollToTop />
   return (
     <div className="App">
       <Router>

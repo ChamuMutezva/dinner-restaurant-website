@@ -69,8 +69,11 @@
 
         .hero__main__descr {
             margin: 24px 0 45px;
+            max-width: 28rem;
         }
-
+        .hero__main__btncontainer {
+            visibility: hidden;
+        }
     }
 }
 
@@ -101,10 +104,11 @@
         display: flex;
         flex-direction: column;
         margin-bottom: 15px;
-        font-size: calculateRem(14);
+        font-size: calculateRem(12);
         position: absolute;
         top: -18px;
         left: 24px;
+        font-family: 'Spartan', sans-serif;
     }
 
     .form__inputs {
@@ -112,8 +116,9 @@
         margin: 5px auto;
         padding: 3px;
         border: none;
-        border-bottom: 2px solid black;
-        font-size: calculateRem(20);
+        border-bottom: 1px solid $lt-grey-bg;
+        font-size: calculateRem(14);
+        font-family: 'Spartan', sans-serif;
 
         &:focus+label {
             opacity: 0;
@@ -132,19 +137,11 @@
     }
 
     @include mQ(1080px) {
-        margin: -175px 165px -540px auto;
-        // margin-right: 165px;
-        // margin-top: -175px;
+        margin: -175px 165px -540px auto;       
     }
 }
 
-fieldset {
-    display: flex;
-    flex-direction: row;
-    border-bottom: 1px solid black;
-    position: relative;
 
-}
 
 select {
     border: none;
@@ -152,10 +149,42 @@ select {
     -webkit-appearance: none;
     -moz-appearance: none;
     color: $lt-grey-tx;
+    font-family: inherit;
+    border-bottom: 1px solid black;
+    padding-bottom: 12px;
 }
 
 legend {
-    margin-bottom: 14px;
+    margin-bottom: 15px;
+  //  margin-left: 15px;
+    font-family: 'Spartan', sans-serif;
+}
+
+.date__container {
+    display: flex;
+    justify-content: space-between;
+}
+
+.time__selection {
+    display: flex;
+    flex-direction: column;
+    margin-top: 24px;
+}
+
+.time__selection__list {
+    display: flex;
+    justify-content: space-between;
+    width: 100%;
+}
+
+.time__selection__title {
+    text-align: left;
+  //  margin-left: 20px;
+}
+
+.date__picker,
+.date__picker {
+    width: 100%;
 }
 
 .hours,
@@ -165,14 +194,17 @@ legend {
     padding: 15px 0;
     text-transform: uppercase;
     color: $lt-grey-tx;
+    font-family: inherit;
 }
 
 .date__selection {
     margin-bottom: 12px;
-
+    padding: 0px 22px;
     @include mQ(680px) {
         display: flex;
         margin-top: 15px;
+        flex-direction: column;
+        padding: 0px 34px;
     }
 }
 
@@ -182,22 +214,6 @@ legend {
     }
 }
 
-.date__selection__list,
-.time__selection__list {
-    display: flex;
-    justify-content: space-around;
-    flex: 2 1 60%;
-}
-
-.date__selection__title,
-.time__selection__title {
-    text-align: left;
-    margin-left: 20px;
-    font-size: calculateRem(18);
-    line-height: 28px;
-    letter-spacing: -0.22px;
-    margin-top: 15px;
-}
 
 .sr__only {
     text-align: left;
@@ -214,7 +230,7 @@ legend {
     justify-content: space-between;
     margin: 30px auto;
     padding-bottom: 24px;
-    border-bottom: 2px solid black;
+    border-bottom: 1px solid $lt-grey-bg;
     width: 85%;
 
     @include mQ(680px) {
