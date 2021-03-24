@@ -32,14 +32,6 @@ Users should be able to:
 
 ![desktop preview](./src/assets/images/design/desktopfullss.png)
 
-Add a screenshot of your solution. The easiest way to do this is to use Firefox to view your project, right-click the page and select "Take a Screenshot". You can choose either a full-height screenshot or a cropped one based on how long the page is. If it's very long, it might be best to crop it.
-
-Alternatively, you can use a tool like [FireShot](https://getfireshot.com/) to take the screenshot. FireShot has a free option, so you don't need to purchase it. 
-
-Then crop/optimize/edit your image however you like, add it to your project, and update the file path in the image above.
-
-
-
 ### Links
 
 - Solution URL: [Github repository](https://github.com/ChamuMutezva/dinner-restaurant-website)
@@ -58,24 +50,42 @@ Then crop/optimize/edit your image however you like, add it to your project, and
 - [React](https://reactjs.org/) - JS library
 - [Sass - Scss](https://sass-lang.com/) - css prepocessor
 - [React Hook Form](https://react-hook-form.com/) - For Form and form validation
+- [React router-dom](https://reactrouter.com/web/guides/quick-start) - For page navigation 
 
 ### What I learned
+Function to scroll to top of page when navigating 
+to a new page. Usually at the end of a page focus of page will
+be at the bottom of that page and doesn't move automatically to top
+of next page
 
-Use this section to recap over some of your major learnings while working through this project. Writing these out and providing code samples of areas you want to highlight is a great way to reinforce your own knowledge.
-
-To see how you can add code snippets, see below:
-
-```html
-<h1>Some HTML code I'm proud of</h1>
 ```
-```css
-.proud-of-this-css {
-  color: papayawhip;
+const ScrollToTop = () => {
+  const { pathname } = useLocation();
+
+  useEffect(() => {
+    window.scrollTo(0, 0);
+  }, [pathname]);
+
+  return null;
 }
-```
-```js
-const proudOfThisFunc = () => {
-  console.log('🎉')
+
+function App() {
+  <ScrollToTop />
+  return (
+    <div className="App">
+      <Router>
+        <Switch>
+          <Route exact path='/'>
+            <Mainpage />
+          </Route>
+          <Route path='/reservation'>
+            <Reservation />
+          </Route>
+        </Switch>
+      </Router>
+      <Footer />
+    </div>
+  );
 }
 ```
 
