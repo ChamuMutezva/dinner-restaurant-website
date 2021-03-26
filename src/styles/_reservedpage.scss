@@ -290,3 +290,12 @@ label:focus+span {
         width: 90%;
     }
 }
+
+.month__selector {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+}
+.errorMsgDate {
+    margin-left: 0;
+}

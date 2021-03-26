@@ -62,72 +62,30 @@ const FormComponent = () => {
                         <div className="month__selector">
 
                             <label className="sr__date__labels" htmlFor="month">Select a month</label>
-                            <select name="month__zone" id="month"
-                             ref={register({ required: true, validate: validateMonth })}>
-                                <option value="MM">MM</option>
-                                <option value="1">01</option>
-                                <option value="2">02</option>
-                                <option value="3">03</option>
-                                <option value="4">04</option>
-                                <option value="5">05</option>
-                                <option value="6">06</option>
-                                <option value="7">07</option>
-                                <option value="8">08</option>
-                                <option value="9">09</option>
-                                <option value="10">10</option>
-                                <option value="11">11</option>
-                                <option value="12">12</option>
-                            </select>
+                            <input type="number" name="month__zone"
+                                id="month" min="1" max="12" placeholder="MM"
+                                ref={register({ required: true, validate: validateMonth })} />
+                            
+                            {errors.month__zone && <span className="errorMsg errorMsgDate">This field is required</span>}
                         </div>
 
 
                         <div className="date__selector">
 
                             <label className="sr__date__labels" htmlFor="date">Select a date</label>
-                            <select name="day__zone" id="date" ref={register({ required: true })}>
-                                <option value="DD">DD</option>
-                                <option value="01">01</option>
-                                <option value="02">02</option>
-                                <option value="03">03</option>
-                                <option value="04">04</option>
-                                <option value="05">05</option>
-                                <option value="06">06</option>
-                                <option value="07">07</option>
-                                <option value="08">08</option>
-                                <option value="09">09</option>
-                                <option value="10">10</option>
-                                <option value="11">11</option>
-                                <option value="12">12</option>
-                                <option value="13">13</option>
-                                <option value="14">14</option>
-                                <option value="15">15</option>
-                                <option value="16">16</option>
-                                <option value="17">17</option>
-                                <option value="18">18</option>
-                                <option value="19">19</option>
-                                <option value="20">20</option>
-                                <option value="21">21</option>
-                                <option value="22">22</option>
-                                <option value="23">23</option>
-                                <option value="24">24</option>
-                                <option value="25">25</option>
-                                <option value="26">26</option>
-                                <option value="27">27</option>
-                                <option value="28">28</option>
-                                <option value="29">29</option>
-                                <option value="30">30</option>
-                                <option value="31">31</option>
-                            </select>
+                            <input type="number" name="day__zone" placeholder="DD" min="1" max="31"
+                                id="date" ref={register({ required: true })} />
+                                {errors.day__zone && <span className="errorMsg errorMsgDate">This field is required</span>}
+
                         </div>
 
                         <div className="year__selector">
                             <label className="sr__date__labels" htmlFor="year">Select a year</label>
-                            <select name="year__zone" id="year" ref={register({ required: true })}>
-                                <option value="YYYY">YYYY</option>
-                                <option value="1">2021</option>
-                                <option value="2">2022</option>
-                                <option value="3">2023</option>
-                            </select>
+                            <input type="number" name="year__zone" id="year"
+                                min="2021" max="2025" placeholder="YYYY"
+                                ref={register({ required: true })} />
+                                {errors.year__zone && <span className="errorMsg errorMsgDate">This field is required</span>}
+
                         </div>
                     </div>
                 </fieldset>
@@ -157,7 +115,7 @@ const FormComponent = () => {
 
                         <div className="state__mode">
                             <label className="sr__date__labels" htmlFor="mode">Select either morning or afternoon</label>
-                            <select className="mode" id="mode"name="stateMode" ref={register({ required: true })}>
+                            <select className="mode" id="mode" name="stateMode" ref={register({ required: true })}>
                                 <option value="am">am</option>
                                 <option value="pm">pm</option>
                             </select>
