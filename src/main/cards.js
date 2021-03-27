@@ -7,18 +7,20 @@ import enjoyableDesktop from '../assets/images/homepage/enjoyable-place-desktop.
 
 // SECOND CARD ASSETS
 import localSourceMobile from '../assets/images/homepage/locally-sourced-mobile.jpg'
-import localSourceMobile2x from '../assets/images/homepage/locally-sourced-mobile@2x.jpg'
+//import localSourceMobile2x from '../assets/images/homepage/locally-sourced-mobile@2x.jpg'
 import localSourceTablet from '../assets/images/homepage/locally-sourced-tablet.jpg'
-import localSourceTablet2x from '../assets/images/homepage/locally-sourced-tablet@2x.jpg'
+//import localSourceTablet2x from '../assets/images/homepage/locally-sourced-tablet@2x.jpg'
 import localSourceDesktop from '../assets/images/homepage/locally-sourced-desktop.jpg'
-import localSourceDesktop2x from '../assets/images/homepage/locally-sourced-desktop@2x.jpg'
+//import localSourceDesktop2x from '../assets/images/homepage/locally-sourced-desktop@2x.jpg'
 
 import CardComponent from './cardComponent'
 const Cards = () => {
     return (
         <section className="cards__section">
 
-            <CardComponent 
+            <CardComponent srcSet1={enjoyableMobile}
+                srcSet2={enjoyableTablet}
+                srcSet3={enjoyableDesktop}
                 src={enjoyableMobile}
                 srcSet={`${enjoyableMobile}, ${enjoyableTablet}, ${enjoyableDesktop}`}
                 alt="Enjoy the beautiful surroundings"
@@ -29,9 +31,9 @@ const Cards = () => {
 
             {/*SECOND CARD*/}
 
-            <CardComponent srcSet1={`${localSourceMobile}, ${localSourceMobile2x}`}
-                srcSet2={`${localSourceTablet}, ${localSourceTablet2x}`}
-                srcSet3={`${localSourceDesktop}, ${localSourceDesktop2x}`}
+            <CardComponent srcSet1={localSourceMobile}
+                srcSet2={localSourceTablet}
+                srcSet3={localSourceDesktop} 
                 src={localSourceMobile}
                 srcSet={`${localSourceMobile}, ${localSourceTablet}, ${localSourceDesktop}`}
                 alt="Enjoy the beautiful surroundings"
@@ -39,7 +41,7 @@ const Cards = () => {
                 description="All our ingredients come directly from our farm or 
                            local fishery. So you can be sure that you’re 
                            eating the freshest, most sustainable food."
-                imageStyle={true}/>
+                imageStyle={true} />
 
         </section>
     )
