@@ -18,9 +18,7 @@ const Cards = () => {
     return (
         <section className="cards__section">
 
-            <CardComponent srcSet1={`${enjoyableMobile}`}
-                srcSet2={`${enjoyableTablet}`}
-                srcSet3={`${enjoyableDesktop}`}
+            <CardComponent 
                 src={enjoyableMobile}
                 srcSet={`${enjoyableMobile}, ${enjoyableTablet}, ${enjoyableDesktop}`}
                 alt="Enjoy the beautiful surroundings"
