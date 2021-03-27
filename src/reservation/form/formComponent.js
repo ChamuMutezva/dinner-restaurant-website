@@ -7,21 +7,22 @@ const FormComponent = () => {
   const { register, handleSubmit, watch, errors } = useForm()
 
   const people__msg = count > 1 ? "people" : "person"
- 
+
   const onSubmit = (data) => {
     console.log(data);
     console.log(errors);
+    alert("Thank you choosing us, please call again")
   };
   console.log(watch("firstname"));
 
-  const countup = () => {
+  const countUp = () => {
     if (count >= 10) {
       return setCount(10);
     } else {
       setCount(count + 1);
     }
   };
-  const countdown = () => {
+  const countDown = () => {
     if (count <= 1) {
       return setCount(1);
     } else {
@@ -51,7 +52,7 @@ const FormComponent = () => {
           id="firstname"
           ref={register({ required: true })}
         />
-        <label className="input__label name__label" htmlFor="firstname">         
+        <label className="input__label name__label" htmlFor="firstname">
           Name
         </label>
         {errors.firstname && (
@@ -66,7 +67,7 @@ const FormComponent = () => {
           name="email"
           aria-required="true"
           id="email"
-          ref={register({ required: true , validate: validateEmail})}
+          ref={register({ required: true, validate: validateEmail })}
         />
         <label className="input__label" htmlFor="email">
           Email
@@ -74,8 +75,7 @@ const FormComponent = () => {
         {errors.email && (
           <span className="errorMsg">Email is required</span>
         )}
-       {/* {errors.email && errors.email.type !== "/^[a-zA-Z0-9.!#$%&'*+/=?^_`{|}~-]+@[a-zA-Z0-9-]+(?:\.[a-zA-Z0-9-]+)*$/"
-        (<span className="errorMsg">email format is not valid</span>)}  */}
+
       </div>
 
       <div className="date__container">
@@ -84,7 +84,7 @@ const FormComponent = () => {
         <div className="date__list__items">
           <div className="date__selection__header">
 
-            <h3 className="date__selection__title">Pick a date</h3>
+            <h2 className="date__selection__title">Pick a date</h2>
             {(errors.month__zone || errors.day__zone || errors.year__zone) && (
               <span className="errorMsg errorMsgDate">
                 This field is incomplete
@@ -123,7 +123,7 @@ const FormComponent = () => {
                 id="date"
                 ref={register({ required: true })}
               />
-              {/*{errors.day__zone && <span className="errorMsg errorMsgDate">This field is required</span>} */}
+
             </div>
 
             <div className="year__selector">
@@ -140,13 +140,13 @@ const FormComponent = () => {
                 className="full__date"
                 ref={register({ required: true })}
               />
-              {/* {errors.year__zone && <span className="errorMsg errorMsgDate">This field is required</span>} */}
+
             </div>
           </div>
         </div>
         <div className="time__selection">
           <div className="time__selection__header">
-            <h3 className="time__selection__title">Pick a time</h3>
+            <h2 className="time__selection__title">Pick a time</h2>
             {(errors.get__hours || errors.get__minutes) && (
               <span className="errorMsg errorMsgDate">
                 This field is incomplete
@@ -162,9 +162,9 @@ const FormComponent = () => {
                 className="hours full__time"
                 id="hour"
                 name="get__hours"
-                min="06" max="11"                
+                min="06" max="11"
                 placeholder="00"
-                ref={register({ required: true , minLength: 2})}
+                ref={register({ required: true, minLength: 2 })}
               />
 
             </div>
@@ -204,19 +204,19 @@ const FormComponent = () => {
       </div>
 
       <div className="reserve__counter">
-        <button type="button" className="count__down" onClick={countdown} 
-        aria-label="reduce the number of people">
+        <button type="button" className="count__down" onClick={countDown}
+          aria-label="reduce the number of people">
           -
         </button>
         <p className="counter__holder">
           <span className="counter">{count}</span> {people__msg}
         </p>
-        <button type="button" className="count__up" onClick={countup} 
-        aria-label="increase the number of people"> 
+        <button type="button" className="count__up" onClick={countUp}
+          aria-label="increase the number of people">
           +
         </button>
       </div>
-      {/*<input type="submit" />*/}
+
       <Button title="Reservation" primary={true} longBtn={true} />
     </form>
   );
