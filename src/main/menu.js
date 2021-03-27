@@ -27,11 +27,10 @@ const Menu = () => {
                 </p>
             </div>
             <div className="menu__cards">
-                <CardComponent srcSet1={`${salmonMobile}, ${salmonMobile2x}`}
-                    srcSet2={`${salmonTabletDesktop}`}
-                    srcSet3={`${salmonTabletDesktop2x}`}
-                    src={salmonMobile}
-                    srcSet={`${salmonMobile}, ${salmonTabletDesktop}, ${salmonTabletDesktop2x}`}
+                <CardComponent srcSet1={salmonMobile}
+                    srcSet2={salmonTabletDesktop}
+                    srcSet3={salmonTabletDesktop2x}
+                    src={salmonMobile}                    
                     alt="Enjoy the delicious salmon"
                     title="Seared Salmon Fillet"
                     description=" Our locally sourced salmon served with
@@ -40,11 +39,10 @@ const Menu = () => {
                     bottomBorder={true} cardMenu={true} />
                 
 
-                <CardComponent srcSet1={`${beefMobile}, ${beefMobile2x}`}
-                    srcSet2={`${beefTabletDesktop}`}
-                    srcSet3={`${beefTabletDesktop2x}`}
+                <CardComponent srcSet1={beefMobile}
+                    srcSet2={beefTabletDesktop}
+                    srcSet3={beefTabletDesktop2x}
                     src={beefMobile}
-                    srcSet={`${beefMobile}, ${beefTabletDesktop}, ${beefTabletDesktop2x}`}
                     alt="Enjoy the delicious Rosemary Filet Mignon"
                     title="Rosemary Filet Mignon"
                     description="Our prime beef served to your taste with a
@@ -54,11 +52,10 @@ const Menu = () => {
 
                 
 
-                <CardComponent srcSet1={`${chocolateMobile}, ${chocolateMobile2x}`}
-                    srcSet2={`${chocolateTabletDesktop}`}
-                    srcSet3={`${chocolateTabletDesktop2x}`}
-                    src={chocolateMobile}
-                    srcSet={`${chocolateMobile}, ${chocolateTabletDesktop}, ${chocolateTabletDesktop2x}`}
+                <CardComponent srcSet1={chocolateMobile}
+                    srcSet2={chocolateTabletDesktop}
+                    srcSet3={chocolateTabletDesktop2x}
+                    src={chocolateMobile}                    
                     alt="Enjoy the delicious Summer Fruit Chocolate Mousse"
                     title="Summer Fruit Chocolate Mousse"
                     description="Creamy mousse combined with summer fruits
