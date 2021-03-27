@@ -20,9 +20,8 @@ const Cards = () => {
 
             <CardComponent srcSet1={enjoyableMobile}
                 srcSet2={enjoyableTablet}
-                srcSet3={enjoyableDesktop}
+                srcSet3={enjoyableDesktop}         
                 src={enjoyableMobile}
-                srcSet={`${enjoyableMobile}, ${enjoyableTablet}, ${enjoyableDesktop}`}
                 alt="Enjoy the beautiful surroundings"
                 title="Enjoyable place for all the family"
                 description="Our relaxed surroundings make dining with us a great
@@ -33,9 +32,8 @@ const Cards = () => {
 
             <CardComponent srcSet1={localSourceMobile}
                 srcSet2={localSourceTablet}
-                srcSet3={localSourceDesktop} 
-                src={localSourceMobile}
-                srcSet={`${localSourceMobile}, ${localSourceTablet}, ${localSourceDesktop}`}
+                srcSet3={localSourceDesktop}  
+                src={localSourceMobile}            
                 alt="Enjoy the beautiful surroundings"
                 title="The most locally sourced food"
                 description="All our ingredients come directly from our farm or 
