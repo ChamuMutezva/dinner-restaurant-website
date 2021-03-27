@@ -1,26 +1,26 @@
 //family gathering images
 import gatheringMobile from '../assets/images/homepage/family-gathering-mobile.jpg'
-import gatheringMobile2x from '../assets/images/homepage/family-gathering-mobile@2x.jpg'
+//import gatheringMobile2x from '../assets/images/homepage/family-gathering-mobile@2x.jpg'
 import gatheringTablet from '../assets/images/homepage/family-gathering-tablet.jpg'
-import gatheringTablet2x from '../assets/images/homepage/family-gathering-tablet@2x.jpg'
+//import gatheringTablet2x from '../assets/images/homepage/family-gathering-tablet@2x.jpg'
 import gatheringDesktop from '../assets/images/homepage/family-gathering-desktop.jpg'
-import gatheringDesktop2x from '../assets/images/homepage/family-gathering-desktop@2x.jpg'
+//import gatheringDesktop2x from '../assets/images/homepage/family-gathering-desktop@2x.jpg'
 
 //special events images
 import specialMobile from '../assets/images/homepage/special-events-mobile.jpg'
-import specialMobile2x from '../assets/images/homepage/special-events-mobile@2x.jpg'
+//import specialMobile2x from '../assets/images/homepage/special-events-mobile@2x.jpg'
 import specialTablet from '../assets/images/homepage/special-events-tablet.jpg'
-import specialTablet2x from '../assets/images/homepage/special-events-tablet@2x.jpg'
+//import specialTablet2x from '../assets/images/homepage/special-events-tablet@2x.jpg'
 import specialDesktop from '../assets/images/homepage/special-events-desktop.jpg'
-import specialDesktop2x from '../assets/images/homepage/special-events-desktop@2x.jpg'
+//import specialDesktop2x from '../assets/images/homepage/special-events-desktop@2x.jpg'
 
 //social events images
 import socialMobile from '../assets/images/homepage/social-events-mobile.jpg'
-import socialMobile2x from '../assets/images/homepage/social-events-mobile@2x.jpg'
+//import socialMobile2x from '../assets/images/homepage/social-events-mobile@2x.jpg'
 import socialTablet from '../assets/images/homepage/social-events-tablet.jpg'
-import socialTablet2x from '../assets/images/homepage/social-events-tablet@2x.jpg'
+//import socialTablet2x from '../assets/images/homepage/social-events-tablet@2x.jpg'
 import socialDesktop from '../assets/images/homepage/social-events-desktop.jpg'
-import socialDesktop2x from '../assets/images/homepage/social-events-desktop@2x.jpg'
+//import socialDesktop2x from '../assets/images/homepage/social-events-desktop@2x.jpg'
 
 import Button from '../shared-components/Button'
 import Events from '../shared-components/Events'
@@ -32,26 +32,26 @@ const CallToAction = () => {
         <section className="cta">
             <div className="cta__events__img">
                 <div className="cta__events__img__list familyMatch">
-                    <EventsImgComponent srcSet1={`${gatheringMobile}, ${gatheringMobile2x}`}
-                        srcSet2={`${gatheringTablet}, ${gatheringTablet2x}`}
-                        srcSet3={`${gatheringDesktop}, ${gatheringDesktop2x}`} src={gatheringMobile}
-                        srcSet={`${gatheringMobile}, ${gatheringTablet}, ${gatheringDesktop}`}
+                    <EventsImgComponent srcSet1={gatheringMobile}
+                        srcSet2={gatheringTablet}
+                        srcSet3={gatheringDesktop}
+                        src={gatheringMobile}
                         alt="the family gathering"
                     />
                 </div>
                 <div className="cta__events__img__list specialMatch ctaHide">
-                    <EventsImgComponent srcSet1={`${specialMobile}, ${specialMobile2x}`}
-                        srcSet2={`${specialTablet}, ${specialTablet2x}`}
-                        srcSet3={`${specialDesktop}, ${specialDesktop2x}`} src={specialMobile}
-                        srcSet={`${specialMobile}, ${specialTablet}, ${specialDesktop}`}
+                    <EventsImgComponent srcSet1={specialMobile}
+                        srcSet2={specialTablet}
+                        srcSet3={specialDesktop}
+                        src={specialMobile}
                         alt="the special events"
                     />
                 </div>
                 <div className="cta__events__img__list socialMatch ctaHide">
-                    <EventsImgComponent srcSet1={`${socialMobile}, ${socialMobile2x}`}
-                        srcSet2={`${socialTablet}, ${socialTablet2x}`}
-                        srcSet3={`${socialDesktop}, ${socialDesktop2x}`} src={socialMobile}
-                        srcSet={`${socialMobile}, ${socialTablet}, ${socialDesktop}`}
+                    <EventsImgComponent srcSet1={socialMobile}
+                        srcSet2={socialTablet}
+                        srcSet3={socialDesktop}
+                        src={socialMobile}
                         alt="the social events"
                     />
                 </div>
