@@ -1,16 +1,16 @@
 import CardComponent from './cardComponent'
 import beefMobile from '../assets/images/homepage/beef-mobile.jpg'
-import beefMobile2x from '../assets/images/homepage/beef-mobile@2x.jpg'
+//import beefMobile2x from '../assets/images/homepage/beef-mobile@2x.jpg'
 import beefTabletDesktop from '../assets/images/homepage/beef-desktop-tablet.jpg'
 import beefTabletDesktop2x from '../assets/images/homepage/beef-desktop-tablet@2x.jpg'
 
 import salmonMobile from '../assets/images/homepage/salmon-mobile.jpg'
-import salmonMobile2x from '../assets/images/homepage/salmon-mobile@2x.jpg'
+//import salmonMobile2x from '../assets/images/homepage/salmon-mobile@2x.jpg'
 import salmonTabletDesktop from '../assets/images/homepage/salmon-desktop-tablet.jpg'
 import salmonTabletDesktop2x from '../assets/images/homepage/salmon-desktop-tablet@2x.jpg'
 
 import chocolateMobile from '../assets/images/homepage/chocolate-mobile.jpg'
-import chocolateMobile2x from '../assets/images/homepage/chocolate-mobile@2x.jpg'
+//import chocolateMobile2x from '../assets/images/homepage/chocolate-mobile@2x.jpg'
 import chocolateTabletDesktop from '../assets/images/homepage/chocolate-desktop-tablet.jpg'
 import chocolateTabletDesktop2x from '../assets/images/homepage/chocolate-desktop-tablet@2x.jpg'
 
