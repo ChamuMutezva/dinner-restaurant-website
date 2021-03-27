@@ -1,9 +1,9 @@
 import enjoyableMobile from '../assets/images/homepage/enjoyable-place-mobile.jpg'
-import enjoyableMobile2x from '../assets/images/homepage/enjoyable-place-mobile@2x.jpg'
+//import enjoyableMobile2x from '../assets/images/homepage/enjoyable-place-mobile@2x.jpg'
 import enjoyableTablet from '../assets/images/homepage/enjoyable-place-tablet.jpg'
-import enjoyableTablet2x from '../assets/images/homepage/enjoyable-place-tablet@2x.jpg'
+//import enjoyableTablet2x from '../assets/images/homepage/enjoyable-place-tablet@2x.jpg'
 import enjoyableDesktop from '../assets/images/homepage/enjoyable-place-desktop.jpg'
-import enjoyableDesktop2x from '../assets/images/homepage/enjoyable-place-desktop@2x.jpg'
+//import enjoyableDesktop2x from '../assets/images/homepage/enjoyable-place-desktop@2x.jpg'
 
 // SECOND CARD ASSETS
 import localSourceMobile from '../assets/images/homepage/locally-sourced-mobile.jpg'
