@@ -46,7 +46,7 @@
         margin: 17px auto 26px;
     }
 
-    @include mQ(680PX) {
+    @include mQ(680px) {
         .hero__main__logo {
             margin-left: 17px;
             display: block;
@@ -62,15 +62,18 @@
         }
     }
 
-    @include mQ(1080PX) {
+    @include mQ(1080px) {
         .hero__main {
-            background-image: linear-gradient(to right, transparent 55%, transparent 50%);
+            background-image: linear-gradient(to right,
+                    transparent 55%,
+                    transparent 50%);
         }
 
         .hero__main__descr {
             margin: 24px 0 45px;
             max-width: 28rem;
         }
+
         .hero__main__btncontainer {
             visibility: hidden;
         }
@@ -92,6 +95,10 @@
     overflow-x: hidden;
     z-index: 2;
 
+    &:focus-within {
+        border: 1px solid red;
+    }
+
     .details {
         position: relative;
         margin: 1rem auto;
@@ -107,18 +114,18 @@
         font-size: calculateRem(12);
         position: absolute;
         top: -18px;
-        left: 24px;
-        font-family: 'Spartan', sans-serif;
+       // left: 24px;
+        font-family: "Spartan", sans-serif;
     }
 
     .form__inputs {
-        width: 85%;
+        width: 100%;
         margin: 5px auto;
         padding: 3px;
         border: none;
         border-bottom: 1px solid $lt-grey-bg;
         font-size: calculateRem(14);
-        font-family: 'Spartan', sans-serif;
+        font-family: "Spartan", sans-serif;
 
         &:focus+label {
             opacity: 0;
@@ -132,16 +139,18 @@
 
         .input__label {
             top: -18px;
-            left: 42px;
+           // left: 42px;
+        }
+
+        .details {
+            width: 86%;
         }
     }
 
     @include mQ(1080px) {
-        margin: -175px 165px -540px auto;       
+        margin: -175px 165px -540px auto;
     }
 }
-
-
 
 select {
     border: none;
@@ -156,63 +165,119 @@ select {
 
 legend {
     margin-bottom: 15px;
-  //  margin-left: 15px;
-    font-family: 'Spartan', sans-serif;
+    //  margin-left: 15px;
+    font-family: "Spartan", sans-serif;
 }
 
 .date__container {
     display: flex;
     justify-content: space-between;
+    flex-direction: column;
+
+    .date__time__selection {
+        margin-bottom: 12px;
+        padding: 0px 22px;
+
+        @include mQ(680px) {
+            display: flex;
+            margin-top: 15px;
+            flex-direction: column;
+            padding: 0px 34px;
+        }
+    }
+
+    .full__date,
+    .full__time {
+        max-width: 5rem;
+        font-size: calculateRem(18);
+        line-height: 28px;
+        letter-spacing: -0.22px;
+        border: none;
+        border-bottom: 1px solid gray;
+        padding-bottom: 10px;
+    }
+
+    .date__selection {
+        display: flex;
+        justify-content: space-between;
+        flex: 0 1 60%;
+    }
+
+    .date__picker {
+        display: flex;
+        flex-direction: column;
+        align-items: flex-start;
+    }
+
+    input[type=number]::-webkit-inner-spin-button,
+    input[type=number]::-webkit-outer-spin-button {
+        -webkit-appearance: none;
+        -moz-appearance: textfield;
+        margin: 0;
+    }
+
+    .date__selection__title {
+        margin-left: 0;
+        text-align: left;
+    }
+
+    @include mQ(680PX) {
+        .date__list__items {
+            display: flex;
+            flex-direction: row;
+            justify-content: space-between;
+            width: 86%;
+            margin: auto;
+
+        }
+    }
+
 }
 
 .time__selection {
     display: flex;
     flex-direction: column;
     margin-top: 24px;
-}
 
-.time__selection__list {
-    display: flex;
-    justify-content: space-between;
-    width: 100%;
-}
 
-.time__selection__title {
-    text-align: left;
-  //  margin-left: 20px;
-}
+    .time__selection__list {
+        display: flex;
+        justify-content: space-between;
+        width: 100%;
+    }
 
-.date__picker,
-.date__picker {
-    width: 100%;
-}
+    .time__selection__title {
+        text-align: left;
+    }
 
-.hours,
-.minutes,
-.mode {
-    border-bottom: 1px solid black;
-    padding: 15px 0;
-    text-transform: uppercase;
-    color: $lt-grey-tx;
-    font-family: inherit;
-}
+    .hours,
+    .minutes,
+    .mode {
+        border-bottom: 1px solid black;
+        padding: 15px 0;
+        text-transform: uppercase;
+        color: $lt-grey-tx;
+        font-family: inherit;
+    }
 
-.date__selection {
-    margin-bottom: 12px;
-    padding: 0px 22px;
     @include mQ(680px) {
         display: flex;
-        margin-top: 15px;
-        flex-direction: column;
-        padding: 0px 34px;
+        flex-direction: row;        
+        width: 86%;
+        justify-content: space-between;
+        margin: 24px auto;
+
+        .time__selection__list {
+            display: flex;
+            justify-content: space-between;
+            /* width: 100%; */
+            flex: 0 1 60%;
+        }
     }
 }
 
-.time__selection {
-    @include mQ(680px) {
-        display: flex;
-    }
-}
+
+
 
 
 .sr__only {
@@ -258,19 +323,19 @@ legend {
 }
 
 .errorMsg {
-    color: red;
-    margin-left: 15px;
+    color: #b54949;
+    font-size: calculateRem(10);
     text-align: left;
+    display: block;
 
     @include mQ(680px) {
-        margin-left: 35px;
+       // margin-left: 35px;
     }
 }
 
 label:focus+span {
     opacity: 0;
 }
-
 
 .sr__date__labels {
     position: absolute;
@@ -296,6 +361,7 @@ label:focus+span {
     flex-direction: column;
     align-items: flex-start;
 }
+
 .errorMsgDate {
     margin-left: 0;
 }

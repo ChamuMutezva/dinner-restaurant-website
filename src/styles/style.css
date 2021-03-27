@@ -1084,7 +1084,7 @@ table {
   margin: 17px auto 26px;
 }
 
-@media screen and (min-width: 680PX) {
+@media screen and (min-width: 680px) {
   .secondaryHeader .hero__main__logo {
     margin-left: 17px;
     display: block;
@@ -1098,7 +1098,7 @@ table {
   }
 }
 
-@media screen and (min-width: 1080PX) {
+@media screen and (min-width: 1080px) {
   .secondaryHeader .hero__main {
     background-image: -webkit-gradient(linear, left top, right top, color-stop(55%, transparent), color-stop(50%, transparent));
     background-image: linear-gradient(to right, transparent 55%, transparent 50%);
@@ -1134,6 +1134,10 @@ table {
   z-index: 2;
 }
 
+.form:focus-within {
+  border: 1px solid red;
+}
+
 .form .details {
   position: relative;
   margin: 1rem auto;
@@ -1159,18 +1163,17 @@ table {
   font-size: 0.75rem;
   position: absolute;
   top: -18px;
-  left: 24px;
-  font-family: 'Spartan', sans-serif;
+  font-family: "Spartan", sans-serif;
 }
 
 .form .form__inputs {
-  width: 85%;
+  width: 100%;
   margin: 5px auto;
   padding: 3px;
   border: none;
   border-bottom: 1px solid #979797;
   font-size: 0.875rem;
-  font-family: 'Spartan', sans-serif;
+  font-family: "Spartan", sans-serif;
 }
 
 .form .form__inputs:focus + label {
@@ -1185,7 +1188,9 @@ table {
   }
   .form .input__label {
     top: -18px;
-    left: 42px;
+  }
+  .form .details {
+    width: 86%;
   }
 }
 
@@ -1208,7 +1213,7 @@ select {
 
 legend {
   margin-bottom: 15px;
-  font-family: 'Spartan', sans-serif;
+  font-family: "Spartan", sans-serif;
 }
 
 .date__container {
@@ -1218,6 +1223,94 @@ legend {
   -webkit-box-pack: justify;
       -ms-flex-pack: justify;
           justify-content: space-between;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+}
+
+.date__container .date__time__selection {
+  margin-bottom: 12px;
+  padding: 0px 22px;
+}
+
+@media screen and (min-width: 680px) {
+  .date__container .date__time__selection {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    margin-top: 15px;
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+    padding: 0px 34px;
+  }
+}
+
+.date__container .full__date,
+.date__container .full__time {
+  max-width: 5rem;
+  font-size: 1.125rem;
+  line-height: 28px;
+  letter-spacing: -0.22px;
+  border: none;
+  border-bottom: 1px solid gray;
+  padding-bottom: 10px;
+}
+
+.date__container .date__selection {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  -webkit-box-flex: 0;
+      -ms-flex: 0 1 60%;
+          flex: 0 1 60%;
+}
+
+.date__container .date__picker {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-align: start;
+      -ms-flex-align: start;
+          align-items: flex-start;
+}
+
+.date__container input[type=number]::-webkit-inner-spin-button,
+.date__container input[type=number]::-webkit-outer-spin-button {
+  -webkit-appearance: none;
+  -moz-appearance: textfield;
+  margin: 0;
+}
+
+.date__container .date__selection__title {
+  margin-left: 0;
+  text-align: left;
+}
+
+@media screen and (min-width: 680PX) {
+  .date__container .date__list__items {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-orient: horizontal;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: row;
+            flex-direction: row;
+    -webkit-box-pack: justify;
+        -ms-flex-pack: justify;
+            justify-content: space-between;
+    width: 86%;
+    margin: auto;
+  }
 }
 
 .time__selection {
@@ -1231,7 +1324,7 @@ legend {
   margin-top: 24px;
 }
 
-.time__selection__list {
+.time__selection .time__selection__list {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -1241,18 +1334,13 @@ legend {
   width: 100%;
 }
 
-.time__selection__title {
+.time__selection .time__selection__title {
   text-align: left;
 }
 
-.date__picker,
-.date__picker {
-  width: 100%;
-}
-
-.hours,
-.minutes,
-.mode {
+.time__selection .hours,
+.time__selection .minutes,
+.time__selection .mode {
   border-bottom: 1px solid black;
   padding: 15px 0;
   text-transform: uppercase;
@@ -1260,30 +1348,32 @@ legend {
   font-family: inherit;
 }
 
-.date__selection {
-  margin-bottom: 12px;
-  padding: 0px 22px;
-}
-
-@media screen and (min-width: 680px) {
-  .date__selection {
-    display: -webkit-box;
-    display: -ms-flexbox;
-    display: flex;
-    margin-top: 15px;
-    -webkit-box-orient: vertical;
-    -webkit-box-direction: normal;
-        -ms-flex-direction: column;
-            flex-direction: column;
-    padding: 0px 34px;
-  }
-}
-
 @media screen and (min-width: 680px) {
   .time__selection {
     display: -webkit-box;
     display: -ms-flexbox;
     display: flex;
+    -webkit-box-orient: horizontal;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: row;
+            flex-direction: row;
+    width: 86%;
+    -webkit-box-pack: justify;
+        -ms-flex-pack: justify;
+            justify-content: space-between;
+    margin: 24px auto;
+  }
+  .time__selection .time__selection__list {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-pack: justify;
+        -ms-flex-pack: justify;
+            justify-content: space-between;
+    /* width: 100%; */
+    -webkit-box-flex: 0;
+        -ms-flex: 0 1 60%;
+            flex: 0 1 60%;
   }
 }
 
@@ -1339,15 +1429,10 @@ legend {
 }
 
 .errorMsg {
-  color: red;
-  margin-left: 15px;
+  color: #b54949;
+  font-size: 0.625rem;
   text-align: left;
-}
-
-@media screen and (min-width: 680px) {
-  .errorMsg {
-    margin-left: 35px;
-  }
+  display: block;
 }
 
 label:focus + span {
@@ -1371,6 +1456,23 @@ label:focus + span {
   .longBtn {
     width: 90%;
   }
+}
+
+.month__selector {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-align: start;
+      -ms-flex-align: start;
+          align-items: flex-start;
+}
+
+.errorMsgDate {
+  margin-left: 0;
 }
 
 body {
