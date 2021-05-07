@@ -20,10 +20,11 @@ const ScrollToTop = () => {
 }
 
 function App() {
-  <ScrollToTop />
+ 
   return (
     <div className="App">
       <Router>
+       <ScrollToTop />
         <Switch>
           <Route exact path='/'>
             <Mainpage />
